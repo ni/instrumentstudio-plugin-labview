@@ -67,6 +67,16 @@
 					<Item Name="Plugin Events Enum.ctl" Type="VI" URL="/&lt;vilib&gt;/Plug-In SDKs/InstrumentStudio SDK/InstrumentStudioPluginSDK.lvlibp/Plugin Events Enum.ctl"/>
 					<Item Name="Plugin Events.ctl" Type="VI" URL="/&lt;vilib&gt;/Plug-In SDKs/InstrumentStudio SDK/InstrumentStudioPluginSDK.lvlibp/Plugin Events.ctl"/>
 				</Item>
+				<Item Name="UnflattenFromString.vim" Type="VI" URL="/&lt;vilib&gt;/Plug-In SDKs/Serializer/UnflattenFromString.vim"/>
+				<Item Name="JSONtext.lvlib" Type="Library" URL="/&lt;vilib&gt;/JDP Science/JSONtext/JSONtext.lvlib"/>
+				<Item Name="JSONtext LVClass Serializer.lvclass" Type="LVClass" URL="/&lt;vilib&gt;/JDP Science/JSONtext/LVClass Serializer/JSONtext LVClass Serializer.lvclass"/>
+				<Item Name="NI_Data Type.lvlib" Type="Library" URL="/&lt;vilib&gt;/Utility/Data Type/NI_Data Type.lvlib"/>
+				<Item Name="JDP Utility.lvlib" Type="Library" URL="/&lt;vilib&gt;/JDP Science/JDP Science Common Utilities/JDP Utility.lvlib"/>
+				<Item Name="Get LV Class Name.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/LVClass/Get LV Class Name.vi"/>
+				<Item Name="Base64 Support.lvlib" Type="Library" URL="/&lt;vilib&gt;/JDP Science/JDP Science Common Utilities/Base64/Base64 Support.lvlib"/>
+				<Item Name="JDP Timestamp.lvlib" Type="Library" URL="/&lt;vilib&gt;/JDP Science/JDP Science Common Utilities/Timestamp/JDP Timestamp.lvlib"/>
+				<Item Name="LVNumericRepresentation.ctl" Type="VI" URL="/&lt;vilib&gt;/numeric/LVNumericRepresentation.ctl"/>
+				<Item Name="FlattenToString.vim" Type="VI" URL="/&lt;vilib&gt;/Plug-In SDKs/Serializer/FlattenToString.vim"/>
 			</Item>
 			<Item Name="NationalInstruments.VIHost.Interop.dll" Type="Document" URL="NationalInstruments.VIHost.Interop.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
@@ -83,7 +93,7 @@
 				<Property Name="Bld_localDestDirType" Type="Str">relativeToCommon</Property>
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{763A8CC4-1CF4-4644-9CA0-466DDFA03E18}</Property>
-				<Property Name="Bld_version.build" Type="Int">11</Property>
+				<Property Name="Bld_version.build" Type="Int">17</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Destination[0].destName" Type="Str">G Plugin Template.lvlibp</Property>
 				<Property Name="Destination[0].path" Type="Path">../builds/PPL/NI_AB_PROJECTNAME.lvlibp</Property>
@@ -93,7 +103,7 @@
 				<Property Name="Destination[1].path" Type="Path">../builds/PPL</Property>
 				<Property Name="DestinationCount" Type="Int">2</Property>
 				<Property Name="PackedLib_callersAdapt" Type="Bool">true</Property>
-				<Property Name="Source[0].itemID" Type="Str">{D7787967-A0EB-46AA-8AD6-2259DFF75604}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{884CF072-DDF9-4A45-A505-D94CB6C26009}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/My Computer/G Plugin Template.lvlib</Property>
