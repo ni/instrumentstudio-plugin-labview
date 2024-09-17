@@ -16,6 +16,9 @@
 		<Item Name="Copy plugin Sdk template.vi" Type="VI" URL="../subVIs/Copy plugin Sdk template.vi"/>
 		<Item Name="Copy Template.vi" Type="VI" URL="../subVIs/Copy Template.vi"/>
 		<Item Name="Create PPL.vi" Type="VI" URL="../subVIs/Create PPL.vi"/>
+		<Item Name="Edit gplugin data file.vi" Type="VI" URL="../subVIs/Edit gplugin data file.vi"/>
+		<Item Name="Get Library Name.vi" Type="VI" URL="../subVIs/Get Library Name.vi"/>
 		<Item Name="Hide the SessionId.vi" Type="VI" URL="../subVIs/Hide the SessionId.vi"/>
+		<Item Name="Open plugin data.vi" Type="VI" URL="../subVIs/Open plugin data.vi"/>
 	</Item>
 </Library>
