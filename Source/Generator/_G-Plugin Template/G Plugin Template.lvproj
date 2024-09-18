@@ -59,14 +59,6 @@
 				<Item Name="Three Button Dialog.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Three Button Dialog.vi"/>
 				<Item Name="Trim Whitespace.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Trim Whitespace.vi"/>
 				<Item Name="whitespace.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/whitespace.ctl"/>
-				<Item Name="InstrumentStudioPluginSDK.lvlibp" Type="LVLibp" URL="/&lt;vilib&gt;/Plug-In SDKs/InstrumentStudio SDK/InstrumentStudioPluginSDK.lvlibp">
-					<Item Name="Panel Size.ctl" Type="VI" URL="/&lt;vilib&gt;/Plug-In SDKs/InstrumentStudio SDK/InstrumentStudioPluginSDK.lvlibp/Panel Size.ctl"/>
-					<Item Name="Setup Session Id.vi" Type="VI" URL="/&lt;vilib&gt;/Plug-In SDKs/InstrumentStudio SDK/InstrumentStudioPluginSDK.lvlibp/Setup Session Id.vi"/>
-					<Item Name="Plugin Session.lvclass" Type="LVClass" URL="/&lt;vilib&gt;/Plug-In SDKs/InstrumentStudio SDK/InstrumentStudioPluginSDK.lvlibp/Plugin Session.lvclass"/>
-					<Item Name="Event Registration Refnum.ctl" Type="VI" URL="/&lt;vilib&gt;/Plug-In SDKs/InstrumentStudio SDK/InstrumentStudioPluginSDK.lvlibp/Event Registration Refnum.ctl"/>
-					<Item Name="Plugin Events Enum.ctl" Type="VI" URL="/&lt;vilib&gt;/Plug-In SDKs/InstrumentStudio SDK/InstrumentStudioPluginSDK.lvlibp/Plugin Events Enum.ctl"/>
-					<Item Name="Plugin Events.ctl" Type="VI" URL="/&lt;vilib&gt;/Plug-In SDKs/InstrumentStudio SDK/InstrumentStudioPluginSDK.lvlibp/Plugin Events.ctl"/>
-				</Item>
 				<Item Name="UnflattenFromString.vim" Type="VI" URL="/&lt;vilib&gt;/Plug-In SDKs/Serializer/UnflattenFromString.vim"/>
 				<Item Name="JSONtext.lvlib" Type="Library" URL="/&lt;vilib&gt;/JDP Science/JSONtext/JSONtext.lvlib"/>
 				<Item Name="JSONtext LVClass Serializer.lvclass" Type="LVClass" URL="/&lt;vilib&gt;/JDP Science/JSONtext/LVClass Serializer/JSONtext LVClass Serializer.lvclass"/>
@@ -77,6 +69,7 @@
 				<Item Name="JDP Timestamp.lvlib" Type="Library" URL="/&lt;vilib&gt;/JDP Science/JDP Science Common Utilities/Timestamp/JDP Timestamp.lvlib"/>
 				<Item Name="LVNumericRepresentation.ctl" Type="VI" URL="/&lt;vilib&gt;/numeric/LVNumericRepresentation.ctl"/>
 				<Item Name="FlattenToString.vim" Type="VI" URL="/&lt;vilib&gt;/Plug-In SDKs/Serializer/FlattenToString.vim"/>
+				<Item Name="InstrumentStudioPluginSDK.lvlibp" Type="LVLibp" URL="/&lt;vilib&gt;/Plug-In SDKs/InstrumentStudio SDK/InstrumentStudioPluginSDK.lvlibp"/>
 			</Item>
 			<Item Name="NationalInstruments.VIHost.Interop.dll" Type="Document" URL="NationalInstruments.VIHost.Interop.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
