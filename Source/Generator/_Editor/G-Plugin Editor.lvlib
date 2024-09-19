@@ -26,6 +26,7 @@
 		<Item Name="Get Reserved Names.vi" Type="VI" URL="../subVIs/Get Reserved Names.vi"/>
 		<Item Name="Open Project.vi" Type="VI" URL="../subVIs/Open Project.vi"/>
 		<Item Name="Valid Measurement Service Name.vi" Type="VI" URL="../subVIs/Valid Measurement Service Name.vi"/>
+		<Item Name="Write gplugin for migrator.vi" Type="VI" URL="../subVIs/Write gplugin for migrator.vi"/>
 		<Item Name="Write gplugin.vi" Type="VI" URL="../subVIs/Write gplugin.vi"/>
 	</Item>
 	<Item Name="Create G Plugin.vi" Type="VI" URL="../../Create G Plugin.vi"/>
