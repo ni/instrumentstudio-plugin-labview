@@ -92,7 +92,7 @@ The G Plug-In SDK for LabVIEW packages enable measurement developers to quickly 
 
 1.	Create a NI Package or Installer build specification in LabVIEW. Refer this [creating build specification](https://www.ni.com/docs/en-US/bundle/labview/page/building-and-distributing-applications.html) for more info.
 2.	Add the PPL as the source file.
-3.	Set the destination directory to C:\Program Files\National Instruments\InstrumentStudio\Addons\<Plug-inName>
+3.	Set the destination directory to `C:\Program Files\National Instruments\InstrumentStudio\Addons\<Plug-inName>`
 4.	Build the NI Package or Installer
 
 ---
