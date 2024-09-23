@@ -57,7 +57,7 @@ The G Plug-In SDK for LabVIEW packages enable measurement developers to quickly 
 1. From the project window, go to `Tools` → `Plug-In SDKs` → `G Plug-in` → `Migrate Measurement...`.
     - In the dialog, enter the `Project Path`, enter the folder `Select the Measurement VI` and click `Next`
   
-     ![Migration dialog](images/MigrationInit.png)
+      ![Migration dialog](images/MigrationInit.png)
 
     - Check the measurement which should be migrated and click `Next`
 
