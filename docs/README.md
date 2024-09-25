@@ -4,16 +4,16 @@
   - [Introduction](#introduction)
   - [Software support](#software-support)
   - [Installation](#installation)
-  - [Developing a LabVIEW measurement](#developing-a-labview-measurement)
-  - [Migrating existing measurement into G Plugin](#migrating-existing-measurement-into-g-plugin)
-  - [Using the measurement in InstrumentStudio](#using-the-measurement-in-instrumentstudio)
-  - [Building and Deploying Release Plug-in](#building-and-deploying-release-plug-in)
+  - [Developing a LabVIEW G Plug-in application](#developing-a-labview-g-plug-in-application)
+  - [Migrating existing labview application into G Plug-in](#migrating-existing-labview-application-into-g-plug-in)
+  - [Using the labview application in InstrumentStudio](#using-the-labview-application-in-instrumentstudio)
+  - [Building and Deploying release Plug-in](#building-and-deploying-release-plug-in)
 
 ---
 
 ## Introduction
 
-The G Plug-In SDK for LabVIEW packages enable measurement developers to quickly create LabVIEW measurements and host them in InstrumentStudio. G  Plug-In Support allows users to interact with measurement with a LabVIEW UI in InstrumentStudio.
+The G Plug-In SDK for LabVIEW packages enable developers to quickly create LabVIEW applications and host them in InstrumentStudio. G Plug-In support allows users to interact with labview applications from InstrumentStudio.
 
 ---
 
@@ -35,31 +35,33 @@ The G Plug-In SDK for LabVIEW packages enable measurement developers to quickly 
 
 ---
 
-## Developing a LabVIEW measurement
+## Developing a LabVIEW G Plug-in application
 
 1. Create and save a new LabVIEW project.
 
 2. From the project window, go to `Tools` → `Plug-In SDKs` → `G Plug-in` → `Create G Plug-in...`.
     - In the dialog, enter the `G Plug-in Name` and `G Plug-in Group`, then click `Create G Plug-in`.
 
-        ![New measurement dialog](images/Startup.png)
+        ![New plug-in dialog](images/Startup.png)
 
-    - This will create a new measurement service library and a UI library.
+    - This will create a new labview library and a packed project library for the library created.
 
-        ![Measurement library files](images/LibraryImage.png)
+        ![Plug-in library files](images/LibraryImage.png)
 
-3. Check G plug-in Components for more details on the components
-4. Edit the `Main.vi` and implement the measurement logic in the block diagram
+3. Check G plug-in components in the [G Plug-in guide](https://github.com/ni/g-plugin-labview/releases/download/v1.0.0.1/G_Plug-in_Guide.pdf) for more details on the components
+4. Open the `Main.vi` and add the logic/implement the application.
 
 
-## Migrating existing measurement into G Plugin
+## Migrating existing labview application into G Plug-in
+
+Unlike the regular LabVIEW application, G Plug-in should be a continuosly running application that is developed using state machine and should be capable of handling the events from the InstrumentStudio. For more details on the events to be handled refer [G Plug-in SDK](https://github.com/ni/g-plugin-labview/releases/download/v1.0.0.1/G_Plug-in_SDK_Reference.pdf). Refer `<labiew>vi.lib\Plug-Ins\Measurement\G Plug-In Template` to get the high level understanding of how a g plug-in can be implemented. 
 
 1. From the project window, go to `Tools` → `Plug-In SDKs` → `G Plug-in` → `Migrate Measurement...`.
     - In the dialog, enter the `Project Path`, enter the folder `Select the Measurement VI` and click `Next`
   
       ![Migration dialog](images/MigrationInit.png)
 
-    - Check the measurement which should be migrated and click `Next`
+    - Check the labview VIs which should be migrated and click `Next`
 
       ![Selection dialog](images/SelectMeasurement.png)
 
@@ -67,18 +69,21 @@ The G Plug-In SDK for LabVIEW packages enable measurement developers to quickly 
 
       ![RenamingPlugins](images/RenamingPlugins.png)
 
-    - The status of the migration will be shown. Click `Review plug-ins` to review and verify the migration measurement
+    - The status of the migration will be shown. Click `Review plug-ins` to review and verify the migrated applications
 
       ![Status](images/Status.png)
 
-    - Review the migrated plugins
+    - Review the migrated plug-ins
 
       ![Review Page](images/ReviewPage.png)
 
+For the VIs that are flat, and are migrated into G plug-in, make sure to add state machine and handle the UI events and InsrumentStudio events appropraitely.
+For the VIs that are implemented using the state machine, ensure to synchonize the new loop added using the migrator
 
-## Using the measurement in InstrumentStudio
 
-1.	Open the measurement project
+## Using the labview application in InstrumentStudio
+
+1.	Open the labview project
 2.	The generated plug-in comes with a Packed Project Library(PPL) build specification. Build the PPL
 3.	Copy all the build output files and place the files in the C:\Program Files\National Instruments\InstrumentStudio\Addons\<PluginName>
 4.	Open InstrumentStudio and click Manual Layout.
@@ -88,7 +93,7 @@ The G Plug-In SDK for LabVIEW packages enable measurement developers to quickly 
 
 ---
 
-## Building and Deploying Release Plug-in
+## Building and Deploying release Plug-in
 
 1.	Create a NI Package or Installer build specification in LabVIEW. Refer this [creating build specification](https://www.ni.com/docs/en-US/bundle/labview/page/building-and-distributing-applications.html) for more info.
 2.	Add the PPL as the source file.
@@ -97,4 +102,4 @@ The G Plug-In SDK for LabVIEW packages enable measurement developers to quickly 
 
 ---
 
-For more information of G Plugin components refer [G Plugin Guide](https://github.com/ni/g-plugin-labview/releases/download/v2.0.0.2/G_Plugin_Guide.pdf)
+For more information of G Plug-in components refer [G Plugin Guide](https://github.com/ni/g-plugin-labview/releases/download/v2.0.0.2/G_Plugin_Guide.pdf)
