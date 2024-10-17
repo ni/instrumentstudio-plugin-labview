@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2024-08-29 13:37:42" Modified_Date="2024-09-19 13:19:33" Creator="sabthagiri.murugan" Comments="" ID="d0228b6cd5f768b09e7007e503f9307d">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2024-08-29 13:37:42" Modified_Date="2024-10-17 17:21:48" Creator="sabthagiri.murugan" Comments="" ID="94363362cf84da39e2a20999e3f5a98b">
   <Library_General_Settings>
     <Package_File_Name>NI_lib_G_Plug_In_SDK_Generator</Package_File_Name>
-    <Library_Version>2.0.0.3</Library_Version>
+    <Library_Version>1.0.0.1</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\Generator</Library_Source_Folder>
     <Library_Output_Folder>..</Library_Output_Folder>
@@ -187,6 +187,12 @@
       </Exclusions>
       <Exclusions>
         <Path>G Plug-in Migration Tool.lvproj</Path>
+      </Exclusions>
+      <Exclusions>
+        <Path>_Measurement Migrator</Path>
+      </Exclusions>
+      <Exclusions>
+        <Path>Migrate G Plug-in.vi</Path>
       </Exclusions>
       <Place_Folder_Contents>
         <Path/>
