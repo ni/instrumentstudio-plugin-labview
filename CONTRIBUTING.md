@@ -1,11 +1,11 @@
-# Contributing to \<reponame\> 
+# Contributing to *g-plugin-labview*
 
-Contributions to \<reponame\> are welcome from all!
+Contributions to *g-plugin-labview* are welcome from all!
 
-\<reponame\> is managed via [git](https://git-scm.com), with the canonical upstream
-repository hosted on [GitHub](https://github.com/ni/<reponame>/).
+*g-plugin-labview* is managed via [git](https://git-scm.com), with the canonical upstream
+repository hosted on [GitHub](https://github.com/ni/g-plugin-labview/).
 
-\<reponame\> follows a pull-request model for development.  If you wish to
+*g-plugin-labview* follows a pull-request model for development.  If you wish to
 contribute, you will need to create a GitHub account, fork this project, push a
 branch with your changes to your project, and then submit a pull request.
 
@@ -19,15 +19,42 @@ this repository.
 
 See [GitHub's official documentation](https://help.github.com/articles/using-pull-requests/) for more details.
 
-# Getting Started
+## Getting Started
 
-- TODO: include build steps here.
+This repo contains source code and package build specifications for building the source into VI packages.
 
-# Testing
+The source code can be found under the `Source` directory. The package definition files (.vipb) can be found under the `Build Specs` directory.
 
-- TODO: include testing steps here.
+## Building the LabVIEW Packages
 
-# Developer Certificate of Origin (DCO)
+The source code is built into two LabVIEW packages
+
+* `ni_lib_g_plugin_sdk`
+* `ni_lib_g_plugin_sdk_generator`
+
+To build the packages:
+
+1. Open the desired VIPM specification file (.vipb) under the [`Build Specs`](https://github.com/ni/g-plugin-labview/tree/main/Source/Build%20Specs) folder
+2. Open the Specification file using VIPM 2023 or later
+3. Click Build - A .vip will be created in the `Source` folder parallel to the `Build Specs` folder.
+
+## `ni_lib_g_plugin_sdk` Package
+
+This is simply a top-level package that has dependencies on the other `ni_lib_g_plugin_sdk_generator` package.
+
+## `ni_lib_g_plugin_sdk_generator` Package
+
+The `ni_lib_g_plugin_sdk_generator` package contains the libraries needed to create new G Plug-in measurements.
+
+### G Plugin Template
+
+The `G Plugin Template` library contains the VIs and controls that are required for a G Plug-in measurement.
+
+### G Plugin Editor
+
+The `G Plugin Editor` library contains the scripting code required to generate a G Plug-in measurement. It starts with the `G Plugin Template` as the base library and then customizes it for a specific measurement.
+
+## Developer Certificate of Origin (DCO)
 
    Developer's Certificate of Origin 1.1
 
@@ -57,5 +84,5 @@ See [GitHub's official documentation](https://help.github.com/articles/using-pul
 
 (taken from [developercertificate.org](https://developercertificate.org/))
 
-See [LICENSE](https://github.com/ni/<reponame>/blob/main/LICENSE)
-for details about how \<reponame\> is licensed.
+See [LICENSE](https://github.com/ni/g-plugin-labview/blob/main/LICENSE)
+for details about how *g-plugin-labview* is licensed.

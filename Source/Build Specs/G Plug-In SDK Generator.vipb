@@ -1,6 +1,6 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2024-08-29 13:37:42" Modified_Date="2024-10-17 17:21:48" Creator="sabthagiri.murugan" Comments="" ID="94363362cf84da39e2a20999e3f5a98b">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2024-08-29 13:37:42" Modified_Date="2024-10-21 15:50:10" Creator="sabthagiri.murugan" Comments="" ID="f67f04a16593d72956f44fe274ea2638">
   <Library_General_Settings>
-    <Package_File_Name>NI_lib_G_Plug_In_SDK_Generator</Package_File_Name>
+    <Package_File_Name>NI_lib_G_Plugin_SDK_Generator</Package_File_Name>
     <Library_Version>1.0.0.1</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\Generator</Library_Source_Folder>
