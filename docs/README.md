@@ -4,9 +4,9 @@
   - [Introduction](#introduction)
   - [Software support](#software-support)
   - [Installation](#installation)
-  - [Steps to create a G Plug-In in LabVIEW](#steps-to-create-a-g-plug-in-in-labview)
+  - [Steps to create a G Plug-In](#steps-to-create-a-g-plug-in)
   - [Using the G Plug-ins in InstrumentStudio](#using-the-g-plug-ins-in-instrumentstudio)
-  - [Building and Deploying release Plug-in](#building-and-deploying-release-plug-in)
+  - [Building and Deploying G Plug-ins](#building-and-deploying-g-plug-ins)
 
 ---
 
@@ -34,7 +34,7 @@ The G Plug-In SDK for LabVIEW allows users to host custom LabVIEW applications d
 
 ---
 
-## Steps to create a G Plug-In in LabVIEW
+## Steps to create a G Plug-In
 
 1. Create and save a new LabVIEW project.
 
@@ -54,17 +54,17 @@ The G Plug-In SDK for LabVIEW allows users to host custom LabVIEW applications d
 
 1. Open the LabVIEW project.
 2. The generated plug-in comes with a Packed Project Library(PPL) build specification. Build the PPL.
-3. Copy all the build output files and place them in the `C:\Program Files\National Instruments\InstrumentStudio\Addons\<Plug-in Name>`
-4. Open InstrumentStudio and click Manual Layout. All the G plug-ins are listed under Add-Ons category.
+3. Copy the build output files and place them under `C:\Program Files\National Instruments\InstrumentStudio\Addons\<Plug-in Name>` directory
+4. Open InstrumentStudio and click `Manual Layout`. The G plug-ins are listed under the Add-Ons category.
 5. Choose the desired plug-in and create a large panel.
 
       ![Manual dialog](images/AddManual.png)
 
 ---
 
-## Building and Deploying release Plug-in
+## Building and Deploying G Plug-ins
 
-1. Create a NI Package or Installer build specification in LabVIEW. Refer this [creating build specification](https://www.ni.com/docs/en-US/bundle/labview/page/building-and-distributing-applications.html) for more info.
+1. Create an NI Package or Installer build specification in LabVIEW. Refer to [creating build specification](https://www.ni.com/docs/en-US/bundle/labview/page/building-and-distributing-applications.html) for more information.
 2. Add the PPL as the source file.
 3. Set the destination directory to `C:\Program Files\National Instruments\InstrumentStudio\Addons\<Plug-in Name>`
 4. Build the NI Package or Installer

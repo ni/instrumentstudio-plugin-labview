@@ -44,7 +44,7 @@ This is simply a top-level package that has dependencies on the other `ni_lib_g_
 
 ## `ni_lib_g_plugin_sdk_generator` Package
 
-The `ni_lib_g_plugin_sdk_generator` package contains the libraries needed to create new G Plug-in measurements.
+The `ni_lib_g_plugin_sdk_generator` package contains the libraries needed to create new G Plug-ins.
 
 ### G Plugin Template
 
