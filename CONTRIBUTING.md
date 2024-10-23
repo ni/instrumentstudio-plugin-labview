@@ -40,7 +40,7 @@ To build the packages:
 
 ## `ni_lib_g_plugin_sdk` Package
 
-This is simply a top-level package that has dependencies on the other `ni_lib_g_plugin_sdk_generator` package.
+This is simply a top-level package that has dependencies on the `ni_lib_g_plugin_sdk_generator` package.
 
 ## `ni_lib_g_plugin_sdk_generator` Package
 
@@ -48,11 +48,11 @@ The `ni_lib_g_plugin_sdk_generator` package contains the libraries needed to cre
 
 ### G Plugin Template
 
-The `G Plugin Template` library contains the VIs and controls that are required for a G Plug-in measurement.
+The `G Plugin Template` library contains the VIs and controls that are required for a G Plug-in.
 
 ### G Plugin Editor
 
-The `G Plugin Editor` library contains the scripting code required to generate a G Plug-in measurement. It starts with the `G Plugin Template` as the base library and then customizes it for a specific measurement.
+The `G Plugin Editor` library contains the scripting code required to generate a G Plug-in. It starts with the `G Plugin Template` as the base library and then customizes it for a specific application.
 
 ## Developer Certificate of Origin (DCO)
 
