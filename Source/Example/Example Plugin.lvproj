@@ -89,7 +89,8 @@
 				<Property Name="Destination[1].path" Type="Path">../builds/NI_AB_PROJECTNAME/Example Plugin</Property>
 				<Property Name="DestinationCount" Type="Int">2</Property>
 				<Property Name="PackedLib_callersAdapt" Type="Bool">true</Property>
-				<Property Name="Source[0].itemID" Type="Str">{6D8747F0-B331-45B0-99B2-CBC111CFE1AF}</Property>
+				<Property Name="Source[0].Container.applyPrefix" Type="Bool">true</Property>
+				<Property Name="Source[0].itemID" Type="Str">{8BE30A50-08DC-4C29-AB1A-94F136D5ABBA}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/My Computer/Example Plugin.lvlib</Property>
