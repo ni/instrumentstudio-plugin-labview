@@ -9,7 +9,7 @@ It will run indefinitely as long as the SoftPanel or InstrumentStudio window tha
 - Demonstrates how to handle InstrumentStudio events.
 - Allows user to enter any string as Edit Time Configuration and Run Time Configuration to write and read them.
 - Records InstrumentStudio events with timestamps in a table.
-- Retains softpanel control data even after closing it without saving.
+- Retains softpanel control data after panel close.
 
 ## Required Driver Software
 
