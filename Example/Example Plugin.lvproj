@@ -90,7 +90,7 @@
 				<Property Name="DestinationCount" Type="Int">2</Property>
 				<Property Name="PackedLib_callersAdapt" Type="Bool">true</Property>
 				<Property Name="Source[0].Container.applyPrefix" Type="Bool">true</Property>
-				<Property Name="Source[0].itemID" Type="Str">{2B7F867B-86EF-4292-86E8-810DF0094CFF}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{60503DAF-C65F-4FFB-824F-B648E95CFF49}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/My Computer/Example Plugin.lvlib</Property>

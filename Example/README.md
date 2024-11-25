@@ -1,8 +1,8 @@
 # G Plug-In Example
 
-This is a G plug-in example that demonstrates the usage of InstrumentStudio SDK APIs. It allows the user to read/write the Edit Time and Run Time Configurations, get the InstrumentStudio project path, and update the running status of the InstrumentStudio softpanel.
+This is a G plug-in example that demonstrates how to host custom LabVIEW applications directly into the InstrumentStudio environment. It allows the user to read/write the Edit Time and Run Time Configurations, get the InstrumentStudio project path, and update the running status of the InstrumentStudio softpanel.
 
-It will run indefinitely as long as the SoftPanel or InstrumentStudio window that contains the plugin is open.
+It will run indefinitely as long as the SoftPanel or InstrumentStudio window that contains the plug-in is open.
 
 ## Features
 
@@ -21,26 +21,26 @@ None
 
 ## User Guide
 
-### Run the example plugin
+### Run the example plug-in
 
-To run the example plugin, follow these steps.
+To run the example plug-in, follow these steps.
 
 1. Open the LabVIEW project (Example Plugin.lvproj) file for the example.
 2. Build the packed project library under the build specification.
 3. Once the build is over, copy the folder containing the builds and place it under the addons folder of InstrumentStudio at `C:\Program Files\National Instruments\InstrumentStudio\Addons`.
 4. Now, open InstrumentStudio, create a new InstrumentStudio project, and save it.
 5. Within the project, create a manual layout by following `Add-Ons -> NI Example Plugins -> Example G Plug-in` in Edit Layout.
-6. Once the softpanel is open, the example plugin will start running.
+6. Once the softpanel is open, the example plug-in will start running.
 
-### Stop the example plugin
+### Stop the example plug-in
 
-Close the softpanel containing the example plugin or the whole InstrumentStudio window to stop the plugin.
+Close the softpanel containing the example plug-in or the whole InstrumentStudio window to stop the plug-in.
 
 ## Developer Guide
 
-### Make changes to the example plugin
+### Make changes to the example plug-in
 
-Logic for the example plugin is contained in Main.vi.
+Logic for the example plug-in is contained in Main.vi.
 
 ### How to add new UI elements
 
