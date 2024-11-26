@@ -13,10 +13,6 @@ It will run indefinitely as long as the soft front panel remains open in Instrum
 - Shows how to retain soft front panel controls data even after the panel closes.
 - Records InstrumentStudio events with timestamps in a table.
 
-## Required Driver Software
-
-None
-
 ## User Guide
 
 ### Run the example plug-in
