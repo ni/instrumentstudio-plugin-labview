@@ -39,39 +39,30 @@ JSONtext | 1.8.2.122
 ## Installation
 
 1. Install the supported version of [LabVIEW](https://www.ni.com/en/support/downloads/software-products/download.labview.html#443865), [InstrumentStudio](https://www.ni.com/en/support/downloads/software-products/download.instrumentstudio.html#544066) and [VI Package Manager](https://www.ni.com/en/support/downloads/tools-network/download.jki-vi-package-manager.html#443251).
-
 2. Install the G Plug-In SDK, followed by the G Plug-In SDK Generator.
 
 ## Developing a LabVIEW Plug-In
 
 1. Create and save a new LabVIEW project.
-
 2. From the project window, go to Tools -> Plug-In SDKs -> G Plug-in -> Create G Plug-in.
-
 3. In the dialog, enter the following details, G Plug-in Name and G Plug-in Group, then click Create G Plug-in.
 
     ![Create G Plug-In](<Images/G Plug-In Guide/Create G Plug-In.png>)
 
 4. The above details will be used while adding the plug-in in InstrumentStudio.
-
 5. This will create a new plug-in library and .gplugindata file.
 
     ![G Plug-In Project](<Images/G Plug-In Guide/G Plug-In Project.png>)
 
 6. Check [G plug-in Components](#g-plug-in-components) for more details on the components.
-
 7. Edit the Main.vi and implement the measurement logic in the block diagram.
 
 ## Using the LabVIEW Plug-In in InstrumentStudio
 
 1. Open the G Plug-In project.
-
 2. The generated plug-in comes with a Packed Project Library(PPL) build specification. Build the PPL.
-
 3. Copy all the build output files and place the files in the `C:\Program Files\National Instruments\InstrumentStudio\Addons\<PluginName>`
-
 4. Open InstrumentStudio and click Manual Layout.
-
 5. Choose the desired plug-in under Add-Ons and create a large panel.
 
     ![InstrumentStudio Edit Layout](<Images/G Plug-In Guide/InstrumentStudio Edit Layout.png>)
@@ -89,13 +80,11 @@ When setting up a packed library build specification, pay particular attention t
   ![PPL Setting - Allow Future Versions](<Images/G Plug-In Guide/PPL Setting - Allow Future Versions.png>)
 
 - Exclude dependent packed libraries – This option should typically be disabled. If this option is enabled, then any packed libraries used by the plugin will not be copied into the build output and will need to be distributed through some other mechanism.
-
-- Exclude dependent shared libraries – This setting will be plugin dependent. If the plugin calls into any shared library other than `NationalInstruments.VIHost.Interop.dll`, then this option is typically disabled unless those libraries are system libraries that will be distributed through some other mechanism such as the installation of a driver.  
+- Exclude dependent shared libraries – This setting will be plugin dependent. If the plugin calls into any shared library other than `NationalInstruments.VIHost.Interop.dll`, then this option is typically disabled unless those libraries are system libraries that will be distributed through some other mechanism such as the installation of a driver.
 
   ![PPL Setting - Uncheck Excludes](<Images/G Plug-In Guide/PPL Setting - Uncheck Excludes.png>)
 
 - Apply prefix to all contained items – Apply prefix to the library name during the build if the shared library is private to the plugin and not in a system path, to avoid conflicts when installed by multiple plugins.
-
   - Adding a unique prefix to the library prevents name collisions when loaded into memory and ensures the plugin uses the exact version it was built against rather than another version installed by a different plugin.
 
   ![PPL Setting - Apply Prefix](<Images/G Plug-In Guide/PPL Setting - Apply Prefix.png>)
@@ -103,27 +92,23 @@ When setting up a packed library build specification, pay particular attention t
 ## Building and Deploying Release Plug-in
 
 1. Create a NI Package or Installer build specification in LabVIEW. Refer this [link](https://www.ni.com/docs/en-US/bundle/labview/page/building-and-distributing-applications.html) for creating build specification.
-
 2. Add the PPL as the source file
-
 3. Set the destination directory to `C:\Program Files\National Instruments\InstrumentStudio\Addons\<Plug-inName>`
-
 4. Build the NI Package or Installer
 
 ## G Plug-In Components
 
 ### Plug-in Format for new measurement
 
-1. The Plug-in consists of LabVIEW library and VIs, controls and a .gplugindata file
+1. The Plug-in consists of LabVIEW library and VIs, controls and a .gplugindata file.
 
     ![G Plug-In Project](<Images/G Plug-In Guide/G Plug-In Project.png>)
 
-2. The main VI consists of few controls.  
+2. The main VI consists of few controls.
 
     ![Main VI](<Images/G Plug-In Guide/Main VI.png>)
 
 3. Other than the controls mentioned above, there is an additional "Session Id" control, which is a U64 control, hidden in the front panel. It is necessary for communication with InstrumentStudio. The control is hidden since it is not meaningful for the users. If the control is not present, InstrumentStudio will fail to load the plug-in.
-
 4. Block diagram is implemented in the producer-consumer architecture. In the image below, the above while loop is responsible for handling events from the InstrumentStudio. The loop below is based on the Queue based state machine, in which the measurement logic can be added.
 
     ![Block Diagram](<Images/G Plug-In Guide/Block Diagram.png>)
@@ -159,43 +144,26 @@ The .gplugindata file is an XML file. The easiest way to understand it is to loo
 ```
 
 - The `GPluginMetadata` element is the root element containing all of the data to be registered with InstrumentStudio. You must specify the namespace for the schema as shown in the example above.
-
 - The `Plugins` element contains the list of plugins
-
 - Each `PluginData` element registers a single plug-in and lists its properties. Attributes of the plug-in are expressed as attributes of the `PluginData` element. The attributes recognized are:
-
   - UniqueName (required) - Use a globally unique identifier (GUID) or similar, including the company name, to ensure the plugin's unique identification across all registered plugins.
-
   - DisplayName (required) - a name that will be displayed to the user for the plug-in in all places in InstrumentStudio.
-
   - SupportedPanelSizes (required) - set this to "Large", "Small", or "LargeAndSmall" to indicate which size layouts this plug-in supports.
 
       ![Panel Size](<Images/G Plug-In Guide/Panel Size.png>)
 
   - GroupName - The name of a group which will appear in the Edit Layout dialog. All plugins with this group name will be shown together in the dialog.
-
   - PanelType - A string to categorize this plug-in. It can be used to filter plugins (show only plugins of this type) in the Edit Layout dialog.
-
   - VIPath (required) - Specify the top-level VI (Main.vi) path for the plugin. If relative, it's relative to the gplugindata file's location or the folder above culture-specific folders if applicable.
-
   - ProjectPath (required if ApplicationContext is set to "Project") - Specify the LabVIEW project path for loading the top-level VI when ApplicationContext is "Project". If relative, it's relative to the gplugindata file's location or the folder above culture-specific folders.
-
   - DebuggingEnabled (defaults to false) - Set this to true to make the application context of the plug-in visible to LabVIEW as a debuggable context.
-
   - ReentrantExecutionEnabled (defaults to true) - Set this to false to improve debugging in LabVIEW 2020 and earlier, addressing reentrant VI issues that may be fixed in future versions.
-
     - The first issue is that there is no way to get at the reentrant VI from the debug session after it starts running. This generally means you have to save a breakpoint in the source VI before the clone is created and starts running.
-
     - However, the saved breakpoint in the clone also isn't being honored and the clone never breaks.
-
     - Similarly, if you set a breakpoint in a non-reentrant VI called by the clone and then try to step out/up into the reentrant VI, it just steps over and effectively does a resume running command.
-
   - ApplicationContext (required) - This is an enum value that can be either "Project", "Global", or "Unique"
-
     - Project - This allows you to share state between multiple plug-ins, or multiple instances of a plug-in implemented within the same lvproj. If you use this option, you also need to specify the ProjectPath attribute.
-
     - Global - This allows you to share state between plugins globally, but there is a greater risk of conflict with plugins from other developers.
-
     - Unique - A unique context will be created for each instance of the plug-in. This avoids the risk of the state of your VI conflicting with other plugins or instance of your plug-in, but it also makes sharing data between plugins and plug-in instances more difficult.
 
 ### Saving the Soft Panel Data
@@ -203,7 +171,6 @@ The .gplugindata file is an XML file. The easiest way to understand it is to loo
 G Plug-In can save and reload the UI controls data. The data can be saved in the InstrumentStudio object. The following steps should be followed to save and retrieve the data,
 
 1. Whenever a soft panel/project is saved in InstrumentStudio, InstrumentStudio triggers a project saved event, enqueue the state that will save the UI control data in the object of the InstrumentStudio.
-
 2. The object can only save the data in string type, all the UI controls that must be saved should be flattened to string and saved in the ‘Edit Time Configuration’ property.
 
     ![Save Data in Edit Time Configuration](<Images/G Plug-In Guide/Save Data in Edit Time Configuration.png>)

@@ -38,7 +38,9 @@
 
 ![Create Session](<Images/G Plug-In SDK Reference/Create Session.png>)
 
-Call this VI with the Session Id as the first SDK call at the beginning of your plugin VI. This VI sets up the events and other data needed for the plugin panel and framework to communicate. If you need to know the panel size for your plugin panel to adjust its front panel, this VI will return the size. Some plugin panels support both large and small panel sizes and need to adjust the visuals on their front panel to better fit into that panel size. LabVIEW plugin panels are uniquely identified by the Plugin Session which is set by the framework when the plugin is run. Plugins must have a control named ‘Session Id’ which is a U64 numeric control on their plugin VI front panel so the framework can correctly set it. This ‘Session Id’ is then passed to Create Session.vi to begin the plugin session. This control can be placed on the user’s VI by right-clicking on the input of the Create Session.vi and choosing ‘Create Control’.
+Call this VI with the Session Id as the first SDK call at the beginning of your plugin VI. This VI sets up the events and other data needed for the plugin panel and framework to communicate. If you need to know the panel size for your plugin panel to adjust its front panel, this VI will return the size. Some plugin panels support both large and small panel sizes and need to adjust the visuals on their front panel to better fit into that panel size.
+
+LabVIEW plugin panels are uniquely identified by the Plugin Session which is set by the framework when the plugin is run. Plugins must have a control named ‘Session Id’ which is a U64 numeric control on their plugin VI front panel so the framework can correctly set it. This ‘Session Id’ is then passed to Create Session.vi to begin the plugin session. This control can be placed on the user’s VI by right-clicking on the input of the Create Session.vi and choosing ‘Create Control’.
 
 The Plugin Session returned is then used to call other SDK VIs during execution of the plugin VI to get or set properties of the plugin panel or to notify the framework of various events.
 
@@ -49,11 +51,8 @@ The Plugin Session returned is then used to call other SDK VIs during execution 
 ### Outputs
 
 - Session out – the new plugin session instance to be used when calling other downstream SDK VIs.
-
 - Edit Time Configuration – the stored edit time configuration for the panel. If this is a new panel this string will be empty.
-
 - Run Time Configuration – the stored run time configuration for the panel. If this is a new panel this string will be empty.
-
 - Panel Size – the size for the plugin panel selected by the user. This is either ‘Large’ or ‘Small’.
 
 ## Read Edit Time Configuration.vi
@@ -69,7 +68,6 @@ Call this VI to read the edit-time configuration string for your plugin panel.
 ### Outputs
 
 - Session out – the duplicated plugin session instance to be used when calling other downstream SDK VIs.
-
 - Edit Time Configuration – the current value of the edit-time configuration for the plugin panel.
 
 ## Read Run Time Configuration.vi
@@ -85,7 +83,6 @@ Call this VI to read the run-time configuration string for your plugin panel.
 ### Outputs 
 
 - Session out – the duplicated plugin session instance to be used when calling other downstream SDK VIs.
-
 - Run Time Configuration – the current value of the run-time configuration for the plugin panel.
 
 ## Write Edit Time Configuration.vi
@@ -97,7 +94,6 @@ Call this VI to update the edit-time configuration string for your plugin panel.
 ### Inputs
 
 - Session in (required) – the plugin session instance for the plugin panel.
-
 - Edit Time Configuration – the new value for the edit-time configuration for the plugin panel.
 
 ### Outputs
@@ -113,7 +109,6 @@ Call this VI to update the run-time configuration string for your plugin panel.
 ### Inputs
 
 - Session in (required) – the plugin session instance for the plugin panel.
-
 - Run Time Configuration – the new value for the run-time configuration for the plugin panel.
 
 ### Outputs
@@ -143,13 +138,11 @@ All events except the Shutdown event pass a Completion ID as part of the event d
 ### Inputs
 
 - Session in (required) – the plugin session instance for the plugin panel.
-
 - Events To Register (required) – an array of events which will be registered and which will fire events to the event structure. Pass one array element for each event you wish to observe.  
 
 ### Outputs
 
 - Session out – the duplicated plugin session instance to be used when calling other downstream SDK VIs
-
 - Event Refnum – an event which can be wired to the event structure’s dynamic events input terminal, adding the framework events as dynamic events within the event structure
 
 Below is an example of registering for and handling the Project Saved event. If the ‘Register For Events.vi’ is called with the Project Saved event, it is critical that the ‘Notify Event Complete.vi’ is called in the Project Saved event, passing in the ‘Completion Id’ received in the event data so that the framework can complete the code for project save and does not hang.
@@ -165,7 +158,6 @@ Call this VI to notify the framework that processing of an event is complete. Th
 ### Inputs
 
 - Session in (required) – the plugin session instance for the plugin panel.
-
 - Completion Id – the id to identify this event uniquely. It is obtained from the event data. See the example under ‘Register For Events.vi’.
 
 ### Outputs
@@ -185,7 +177,6 @@ Call this VI to retrieve the absolute path of the InstrumentStudio project file 
 ### Outputs
 
 - Session out – the duplicated plugin session instance to be used when calling other downstream SDK VIs.
-
 - Project Path – the absolute path to the ‘.instudioproj’ file of the current project on disk. Returns an empty string if the project has not yet been saved.
 
 ## Update Running State.vi
@@ -197,7 +188,6 @@ Call this VI to notify the framework when the plugin panel is running or stops r
 ### Inputs
 
 - Plugin Session in (required) – the plugin session instance for the plugin panel.
-
 - Is Running – pass true if the plugin panel is currently running or false if it is stopped.
 
 ### Outputs
