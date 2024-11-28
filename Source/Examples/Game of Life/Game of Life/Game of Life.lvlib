@@ -50,5 +50,6 @@
 		<Item Name="Error Handler - Event Handling Loop.vi" Type="VI" URL="../subVIs/Error Handler - Event Handling Loop.vi"/>
 		<Item Name="Error Handler - Message Handling Loop.vi" Type="VI" URL="../subVIs/Error Handler - Message Handling Loop.vi"/>
 	</Item>
+	<Item Name="Add Event.vi" Type="VI" URL="../subVIs/Helpers/Add Event.vi"/>
 	<Item Name="Main.vi" Type="VI" URL="../Main.vi"/>
 </Library>
