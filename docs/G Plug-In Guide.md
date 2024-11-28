@@ -4,12 +4,12 @@
   - [Overview](#overview)
   - [Software Requirements](#software-requirements)
   - [Installation](#installation)
-  - [Developing a LabVIEW Plug-In](#developing-a-labview-plug-in)
-  - [Using the LabVIEW Plug-In in InstrumentStudio](#using-the-labview-plug-in-in-instrumentstudio)
+  - [Developing a LabVIEW Plug-In](#developing-a-g-plug-in)
+  - [Using the G Plug-In in InstrumentStudio](#using-the-g-plug-in-in-instrumentstudio)
   - [Recommended PPL build settings](#recommended-ppl-build-settings)
-  - [Building and Deploying Release Plug-in](#building-and-deploying-release-plug-in)
+  - [Package a G Plug-in](#package-a-g-plug-in)
   - [G Plug-In Components](#g-plug-in-components)
-    - [### Plug-in format for newly created G Plug-In](#plug-in-format-for-newly-created-g-plug-in)
+    - [Plug-in format for newly created G Plug-In](#plug-in-format-for-newly-created-g-plug-in)
     - [G Plug-In Data File](#g-plug-in-data-file)
       - [G Plug-In Data Elements](#g-plug-in-data-elements)
     - [Saving the Soft Panel Data](#saving-the-soft-panel-data)
@@ -28,9 +28,9 @@ Related Information:
 
 NI Packages Dependency | Version Required
 --- | ---
-LabVIEW (64-bit) | 2021 SP1 or later
-InstrumentStudio | 2023 Q4 or later
-JKI VI Package Manager | 2021 SP1 or later
+[LabVIEW (64-bit)](https://www.ni.com/en/support/downloads/software-products/download.labview.html#443865), [InstrumentStudio](https://www.ni.com/en/support/downloads/software-products/download.instrumentstudio.html#544066) | 2021 SP1 or later
+[InstrumentStudio](https://www.ni.com/en/support/downloads/software-products/download.instrumentstudio.html#544066) | 2023 Q4 or later
+[JKI VI Package Manager](https://www.ni.com/en/support/downloads/tools-network/download.jki-vi-package-manager.html#443251) | 2021 SP1 or later
 
 VIPM Packages Dependency | Version Required  
 --- | ---
@@ -39,10 +39,10 @@ JSONtext | 1.8.2.122
 
 ## Installation
 
-1. Install the supported version of [LabVIEW](https://www.ni.com/en/support/downloads/software-products/download.labview.html#443865), [InstrumentStudio](https://www.ni.com/en/support/downloads/software-products/download.instrumentstudio.html#544066) and [VI Package Manager](https://www.ni.com/en/support/downloads/tools-network/download.jki-vi-package-manager.html#443251).
+1. Install the supported versions of software given in [Software Requirements](#software-requirements)
 2. Install the G Plug-In SDK, followed by the G Plug-In SDK Generator.
 
-## Developing a LabVIEW Plug-In
+## Developing a G Plug-In
 
 1. Create and save a new LabVIEW project.
 2. From the project window, go to `Tools` → `Plug-In SDKs` → `G Plug-in` → `Create G Plug-in`
@@ -56,34 +56,38 @@ JSONtext | 1.8.2.122
 6. Check [G plug-in Components](#g-plug-in-components) for more details on the components.
 7. Edit the Main.vi and implement the logic in the block diagram.
 
-## Using the LabVIEW Plug-In in InstrumentStudio
+## Using the G Plug-In in InstrumentStudio
 
 1. Open the G Plug-In project.
-2. The generated plug-in comes with a Packed Project Library(PPL) build specification. Build the PPL.
-3. Copy all the build output files (Packed Project Library and .gplugindata) and place the files in the `C:\Program Files\National Instruments\InstrumentStudio\Addons\<PluginName>`
+2. The generated plug-in comes with a Packed Project Library (PPL) build specification. Build the PPL.
+3. Copy the Packed Project Library (.ppl) and the `.gplugindata` file, then place them in the following directory: `C:\Program Files\National Instruments\InstrumentStudio\Addons\<PluginName>`
 4. Open InstrumentStudio and click Manual Layout.
 5. Choose the desired plug-in under Add-Ons and create a large panel.  
     ![InstrumentStudio Edit Layout](./images/G%20Plug-In%20Guide/InstrumentStudio%20Edit%20Layout.png)
 
-6. The layout will be populated with the plug-in UI  
+6. The plug-in UI will be displayed as an SFP in InstrumentStudio.  
     ![InstrumentStudio G Plug-In Soft Panel](./images/G%20Plug-In%20Guide/InstrumentStudio%20G%20Plug-In%20Soft%20Panel.png)
 
 ## Recommended PPL build settings
 
-When setting up a packed library build specification, pay particular attention to the following settings:
+When setting up a packed library build specification, ensure the following settings are configured appropriately:
 
-- Allow future versions of LabVIEW to load this packed library – This option should always be enabled. InstrumentStudio only supports loading of plugins using a single version of the LabVIEW Runtime Engine. If this option is not checked, the plugin will fail to load if InstrumentStudio uses a different version of the runtime engine than the version the plugin was built against. If multiple versions of the LabVIEW Runtime Engine are installed on the machine, InstrumentStudio will use the newest version.  
+- Allow future versions of LabVIEW to load this Packed Library:
+  - This option should always be enabled. InstrumentStudio supports plugin loading using only a single version of the LabVIEW Runtime Engine. If this option is not selected, the plugin will fail to load when InstrumentStudio utilizes a different runtime engine version than the one against which the plugin was built. If multiple versions of the LabVIEW Runtime Engine are installed on the system, InstrumentStudio will use the latest version.  
   ![PPL Setting - Allow Future Versions](./images/G%20Plug-In%20Guide/PPL%20Setting%20-%20Allow%20Future%20Versions.png)
 
-- Exclude dependent packed libraries – This option should typically be disabled. If this option is enabled, then any packed libraries used by the plugin will not be copied into the build output and will need to be distributed through some other mechanism.
-- Exclude dependent shared libraries – This setting will be plugin dependent. If the plugin calls into any shared library other than `NationalInstruments.VIHost.Interop.dll`, then this option is typically disabled unless those libraries are system libraries that will be distributed through some other mechanism such as the installation of a driver.  
+- Exclude dependent Packed libraries:
+  - This option should generally be disabled. When enabled, any packed libraries used by the plugin will not be included in the build output, requiring distribution through alternative mechanisms.
+- Exclude dependent Shared libraries:
+  - This setting depends on the plugin’s requirements. If the plugin interacts with shared libraries other than `NationalInstruments.VIHost.Interop.dll`, this option is typically disabled unless the shared libraries are system-provided and distributed separately, such as through driver installation.  
   ![PPL Setting - Uncheck Excludes](./images/G%20Plug-In%20Guide/PPL%20Setting%20-%20Uncheck%20Excludes.png)
 
-- Apply prefix to all contained items – Apply prefix to the library name during the build if the shared library is private to the plugin and not in a system path, to avoid conflicts when installed by multiple plugins.
-  - Adding a unique prefix to the library prevents name collisions when loaded into memory and ensures the plugin uses the exact version it was built against rather than another version installed by a different plugin.  
+- Apply a prefix to all contained items:
+  - Enable this option to apply a prefix to the library name during the build process if the shared library is private to the plugin and not located in a system path. This helps avoid conflicts when the library is installed by multiple plugins.
+  - Adding a unique prefix prevents name collisions when the library is loaded into memory. It also ensures the plugin uses the specific version it was built against, rather than another version installed by a different plugin.  
   ![PPL Setting - Apply Prefix](./images/G%20Plug-In%20Guide/PPL%20Setting%20-%20Apply%20Prefix.png)
 
-## Building and Deploying Release Plug-in
+## Package a G Plug-in
 
 1. Create a NI Package or Installer build specification in LabVIEW. Refer this [link](https://www.ni.com/docs/en-US/bundle/labview/page/building-and-distributing-applications.html) for creating build specification.
 2. Add the PPL as the source file
@@ -94,26 +98,28 @@ When setting up a packed library build specification, pay particular attention t
 
 ### Plug-in format for newly created G Plug-In
 
-1. The Plug-in consists of LabVIEW library and VIs, controls and a .gplugindata file.  
+1. The Plug-in comprises a LabVIEW library, VIs, controls and a `.gplugindata` file.  
     ![G Plug-In Project](./images/G%20Plug-In%20Guide/G%20Plug-In%20Project.png)
 
-2. The main VI consists of few controls.  
+2. The main VI contains a few controls.  
     ![Main VI](./images/G%20Plug-In%20Guide/Main%20VI.png)
 
-3. Other than the controls mentioned above, there is an additional "Session Id" control, which is a U64 control, hidden in the front panel. It is necessary for communication with InstrumentStudio. The control is hidden since it is not meaningful for the users. If the control is not present, InstrumentStudio will fail to load the plug-in.
-4. Block diagram is implemented in the producer-consumer architecture. In the image below, the above while loop is responsible for handling events from the InstrumentStudio. The loop below is based on the Queue based state machine, in which the logic can be added.  
+3. In addition to the controls mentioned above, there is a hidden "Session Id" control on the front panel. This control, of type U64, is essential for communication with InstrumentStudio. It is hidden because it does not hold any meaningful value for the end user. If the "Session Id" control is absent, InstrumentStudio will fail to load the plugin.
+4. The block diagram is implemented using the producer-consumer architecture. In the image below,
+    - The upper while loop is responsible for handling events from InstrumentStudio.
+    - The lower loop uses a queue-based state machine, which provides a framework for adding custom logic.  
     ![Block Diagram](./images/G%20Plug-In%20Guide/Block%20Diagram.png)
 
-5. To be notified of events from InstrumentStudio, the plug-in must specifically register for each event using the Register For Events vi and create the appropriate cases within an event structure. Refer to the [G Plug-In SDK Reference](<G Plug-In SDK Reference.md>) for more details.  
+5. To receive event notifications from InstrumentStudio, the plugin must explicitly register for each event using the `Register For Events.vi` and implement the corresponding cases within an event structure. Refer to the [G Plug-In SDK Reference](<G Plug-In SDK Reference.md>) for more details.  
     ![Event Handling](./images/G%20Plug-In%20Guide/Event%20Handling.png)
 
-6. Along with the InstrumentStudio events, a stop event is registered to synchronize the two loops.
+6. Along with these InstrumentStudio events, a Stop Event is registered to ensure synchronization between the two loops.
 
 ### G Plug-In Data File
 
-In order to register a plug-in, put a .gplugindata into the Addons directory under the InstrumentStudio installation directory. The .gplugindata file is an XML file that tells InstrumentStudio the properties of the plug-in and how to find the code that implements it.
+To register a plug-in, place the `.gplugindata` file in the "Addons" directory under the InstrumentStudio installation directory. This XML file defines the plugin’s properties and provides the necessary information for InstrumentStudio to locate the corresponding implementation code.
 
-The .gplugindata file is an XML file. The easiest way to understand it is to look at an example.
+The .gplugindata file is an XML file. An example is presented below, explaining its structure.
 
 ```xml
 <?xml version="1.0"?>
