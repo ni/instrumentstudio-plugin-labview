@@ -36,7 +36,7 @@
 
 ## Create Session.vi
 
-![Create Session](<Images/G Plug-In SDK Reference/Create Session.png>)
+![Create Session](./images/G%20Plug-In%20SDK%20Reference/Create%20Session.png)
 
 Call this VI with the Session Id as the first SDK call at the beginning of your plugin VI. This VI sets up the events and other data needed for the plugin panel and framework to communicate. If you need to know the panel size for your plugin panel to adjust its front panel, this VI will return the size. Some plugin panels support both large and small panel sizes and need to adjust the visuals on their front panel to better fit into that panel size.
 
@@ -57,7 +57,7 @@ The Plugin Session returned is then used to call other SDK VIs during execution 
 
 ## Read Edit Time Configuration.vi
 
-![Read Edit Time Configuration](<Images/G Plug-In SDK Reference/Read Edit Time Configuration.png>)
+![Read Edit Time Configuration](./images/G%20Plug-In%20SDK%20Reference/Read%20Edit%20Time%20Configuration.png)
 
 Call this VI to read the edit-time configuration string for your plugin panel.
 
@@ -72,7 +72,7 @@ Call this VI to read the edit-time configuration string for your plugin panel.
 
 ## Read Run Time Configuration.vi
 
-![Read Run Time Configuration](<Images/G Plug-In SDK Reference/Read Run Time Configuration.png>)
+![Read Run Time Configuration](./images/G%20Plug-In%20SDK%20Reference/Read%20Run%20Time%20Configuration.png)
 
 Call this VI to read the run-time configuration string for your plugin panel.
 
@@ -87,7 +87,7 @@ Call this VI to read the run-time configuration string for your plugin panel.
 
 ## Write Edit Time Configuration.vi
 
-![Write Edit Time Configuration](<Images/G Plug-In SDK Reference/Write Edit Time Configuration.png>)
+![Write Edit Time Configuration](./images/G%20Plug-In%20SDK%20Reference/Write%20Edit%20Time%20Configuration.png)
 
 Call this VI to update the edit-time configuration string for your plugin panel.
 
@@ -102,7 +102,7 @@ Session out – the duplicated plugin session instance to be used when calling o
 
 ## Write Run Time Configuration.vi
 
-![Write Run Time Configuration](<Images/G Plug-In SDK Reference/Write Run Time Configuration.png>)
+![Write Run Time Configuration](./images/G%20Plug-In%20SDK%20Reference/Write%20Run%20Time%20Configuration.png)
 
 Call this VI to update the run-time configuration string for your plugin panel.
 
@@ -117,7 +117,7 @@ Call this VI to update the run-time configuration string for your plugin panel.
 
 ## Register For Events.vi
 
-![Register For Events](<Images/G Plug-In SDK Reference/Register For Events.png>)
+![Register For Events](./images/G%20Plug-In%20SDK%20Reference/Register%20For%20Events.png)
 
 Call this VI to let the framework know which events you want to get notifications for. Only pass in events that you are going to handle in your event structure. The following events are available.
 
@@ -133,7 +133,7 @@ The Stop All Outputs event is fired when the 'Stop all outputs' button is presse
 
 The Shutdown event is fired when the document containing the plugin is closed, the project containing the plugin is closed, or the plugin panel is removed from the document using the Edit Layout dialog.  Failure to stop execution of the plugin in response to this event will prevent the project from closing or a force abort of the plugin.  Plugins should always register for this event.
 
-All events except the Shutdown event pass a Completion ID as part of the event data.  You must call Notify Event Complete with this Completion Id to let the framework know when processing of the event is complete. Failure to do this may result in a UI hang or freeze.
+All events except the Shutdown event pass a Completion ID as part of the event data. You must call Notify Event Complete with this Completion Id to let the framework know when processing of the event is complete. Failure to do this may result in a UI hang or freeze.
 
 ### Inputs
 
@@ -147,11 +147,11 @@ All events except the Shutdown event pass a Completion ID as part of the event d
 
 Below is an example of registering for and handling the Project Saved event. If the ‘Register For Events.vi’ is called with the Project Saved event, it is critical that the ‘Notify Event Complete.vi’ is called in the Project Saved event, passing in the ‘Completion Id’ received in the event data so that the framework can complete the code for project save and does not hang.
 
-![Register and Notify Event Complete example](<Images/G Plug-In SDK Reference/Register and Notify Event Complete example.png>)
+![Register and Notify Event Complete example](./images/G%20Plug-In%20SDK%20Reference/Register%20and%20Notify%20Event%20Complete%20example.png)
 
 ## Notify Event Complete.vi
 
-![Notify Event Complete](<Images/G Plug-In SDK Reference/Notify Event Complete.png>)
+![Notify Event Complete](./images/G%20Plug-In%20SDK%20Reference/Notify%20Event%20Complete.png)
 
 Call this VI to notify the framework that processing of an event is complete. This VI should be called for each SDK event received except the Shutdown event.
 
@@ -166,7 +166,7 @@ Call this VI to notify the framework that processing of an event is complete. Th
 
 ## Read Project Path.vi
 
-![Read Project Path](<Images/G Plug-In SDK Reference/Read Project Path.png>)
+![Read Project Path](./images/G%20Plug-In%20SDK%20Reference/Read%20Project%20Path.png)
 
 Call this VI to retrieve the absolute path of the InstrumentStudio project file on disk.
 
@@ -181,7 +181,7 @@ Call this VI to retrieve the absolute path of the InstrumentStudio project file 
 
 ## Update Running State.vi
 
-![Update Running State](<Images/G Plug-In SDK Reference/Update Running State.png>)
+![Update Running State](./images/G%20Plug-In%20SDK%20Reference/Update%20Running%20State.png)
 
 Call this VI to notify the framework when the plugin panel is running or stops running.
 
@@ -196,7 +196,7 @@ Call this VI to notify the framework when the plugin panel is running or stops r
 
 ## Close Session.vi
 
-![Close Session](<Images/G Plug-In SDK Reference/Close Session.png>)
+![Close Session](./images/G%20Plug-In%20SDK%20Reference/Close%20Session.png)
 
 Call this VI to close out all references created for the session and unregister the plugin session with the framework. It should be called at the end of your plugin VI after the event loop is completed as the last call in the VI. After calling this VI, the plugin session is no longer valid and should not be used to call any other SDK VIs.  This VI executes regardless of the value of error in.
 
