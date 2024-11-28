@@ -18,7 +18,7 @@
 
 ## Overview
 
-The G Plug-In SDK for LabVIEW allows users to host custom LabVIEW applications directly into the InstrumentStudio environment. This enables users to enhance the functionality of InstrumentStudio by adding custom measurements, controls, and displays tailored to their specific needs. G Plug-In support allows users to interact with LabVIEW applications from InstrumentStudio soft panel.
+The G Plug-In SDK for LabVIEW allows users to integrate custom LabVIEW applications into InstrumentStudio. This integration enhances InstrumentStudio's functionality by enabling the addition of highly interactive measurements, controls, and displays that are tailored to their specific requirements. With G Plug-In support, users can interact with LabVIEW applications directly from the InstrumentStudio soft panel, providing a unified and efficient workflow.
 
 Related Information:
 
