@@ -27,7 +27,9 @@
 			<Item Name="Get Neighbor Values.vi" Type="VI" URL="../subVIs/Helpers/Get Neighbor Values.vi"/>
 			<Item Name="Next Generation.vi" Type="VI" URL="../subVIs/Helpers/Next Generation.vi"/>
 			<Item Name="Wrap Coordinates.vi" Type="VI" URL="../subVIs/Helpers/Wrap Coordinates.vi"/>
+			<Item Name="Enum to Variant Array.vi" Type="VI" URL="../subVIs/Helpers/Enum to Variant Array.vi"/>
 			<Item Name="Wrap Next Generation.vi" Type="VI" URL="../subVIs/Helpers/Wrap Next Generation.vi"/>
+			<Item Name="Add Event.vi" Type="VI" URL="../subVIs/Helpers/Add Event.vi"/>
 		</Item>
 		<Item Name="Message Queue" Type="Folder">
 			<Item Name="support" Type="Folder">
@@ -50,6 +52,5 @@
 		<Item Name="Error Handler - Event Handling Loop.vi" Type="VI" URL="../subVIs/Error Handler - Event Handling Loop.vi"/>
 		<Item Name="Error Handler - Message Handling Loop.vi" Type="VI" URL="../subVIs/Error Handler - Message Handling Loop.vi"/>
 	</Item>
-	<Item Name="Add Event.vi" Type="VI" URL="../subVIs/Helpers/Add Event.vi"/>
 	<Item Name="Main.vi" Type="VI" URL="../Main.vi"/>
 </Library>
