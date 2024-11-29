@@ -4,10 +4,10 @@
   - [Overview](#overview)
   - [Software Requirements](#software-requirements)
   - [Installation](#installation)
-  - [Developing a LabVIEW Plug-In](#developing-a-g-plug-in)
+  - [Developing a G Plug-In](#developing-a-g-plug-in)
   - [Using the G Plug-In in InstrumentStudio](#using-the-g-plug-in-in-instrumentstudio)
   - [Recommended PPL build settings](#recommended-ppl-build-settings)
-  - [Package a G Plug-in](#package-a-g-plug-in)
+  - [Package a G Plug-In](#package-a-g-plug-in)
   - [G Plug-In Components](#g-plug-in-components)
     - [Plug-in format for newly created G Plug-In](#plug-in-format-for-newly-created-g-plug-in)
     - [G Plug-In Data File](#g-plug-in-data-file)
@@ -28,18 +28,18 @@ Related Information:
 
 NI Packages Dependency | Version Required
 --- | ---
-[LabVIEW (64-bit)](https://www.ni.com/en/support/downloads/software-products/download.labview.html#443865), [InstrumentStudio](https://www.ni.com/en/support/downloads/software-products/download.instrumentstudio.html#544066) | 2021 SP1 or later
+[LabVIEW (64-bit)](https://www.ni.com/en/support/downloads/software-products/download.labview.html#443865), | 2021 SP1 or later
 [InstrumentStudio](https://www.ni.com/en/support/downloads/software-products/download.instrumentstudio.html#544066) | 2023 Q4 or later
 [JKI VI Package Manager](https://www.ni.com/en/support/downloads/tools-network/download.jki-vi-package-manager.html#443251) | 2021 SP1 or later
 
 VIPM Packages Dependency | Version Required  
 --- | ---
-JDP Science Common Utilities | 1.4.1.18
-JSONtext | 1.8.2.122
+[JDP Science Common Utilities](https://www.vipm.io/package/jdp_science_lib_common_utilities/) | 1.4.1.18
+[JSONtext](https://www.vipm.io/package/jdp_science_jsontext/) | 1.8.2.122
 
 ## Installation
 
-1. Install the supported versions of software given in [Software Requirements](#software-requirements)
+1. Install the supported versions of software given in [Software Requirements](#software-requirements).
 2. Install the G Plug-In SDK, followed by the G Plug-In SDK Generator.
 
 ## Developing a G Plug-In
@@ -87,12 +87,12 @@ When setting up a packed library build specification, ensure the following setti
   - Adding a unique prefix prevents name collisions when the library is loaded into memory. It also ensures the plugin uses the specific version it was built against, rather than another version installed by a different plugin.  
   ![PPL Setting - Apply Prefix](./images/G%20Plug-In%20Guide/PPL%20Setting%20-%20Apply%20Prefix.png)
 
-## Package a G Plug-in
+## Package a G Plug-In
 
-1. Create a NI Package or Installer build specification in LabVIEW. Refer this [link](https://www.ni.com/docs/en-US/bundle/labview/page/building-and-distributing-applications.html) for creating build specification.
-2. Add the PPL as the source file
+1. Create an Installer build specification in LabVIEW. Refer this [link](https://www.ni.com/docs/en-US/bundle/labview/page/building-and-distributing-applications.html) for creating build specification.
+2. Add the PPL as the source file.
 3. Set the destination directory to `C:\Program Files\National Instruments\InstrumentStudio\Addons\<Plug-inName>`
-4. Build the NI Package or Installer
+4. Build the Installer.
 
 ## G Plug-In Components
 
