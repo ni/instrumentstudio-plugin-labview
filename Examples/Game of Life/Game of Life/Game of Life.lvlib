@@ -22,12 +22,14 @@
 		<Item Name="Helpers" Type="Folder">
 			<Property Name="NI.SortType" Type="Int">3</Property>
 			<Item Name="Initialize Game.vi" Type="VI" URL="../subVIs/Helpers/Initialize Game.vi"/>
+			<Item Name="Get System Document Path.vi" Type="VI" URL="../subVIs/Helpers/Get System Document Path.vi"/>
 			<Item Name="Get 8 Neighbors.vi" Type="VI" URL="../subVIs/Helpers/Get 8 Neighbors.vi"/>
 			<Item Name="Get Neighbor Coordinates.vi" Type="VI" URL="../subVIs/Helpers/Get Neighbor Coordinates.vi"/>
 			<Item Name="Get Neighbor Values.vi" Type="VI" URL="../subVIs/Helpers/Get Neighbor Values.vi"/>
 			<Item Name="Next Generation.vi" Type="VI" URL="../subVIs/Helpers/Next Generation.vi"/>
 			<Item Name="Wrap Coordinates.vi" Type="VI" URL="../subVIs/Helpers/Wrap Coordinates.vi"/>
 			<Item Name="Enum to Variant Array.vi" Type="VI" URL="../subVIs/Helpers/Enum to Variant Array.vi"/>
+			<Item Name="Log Events.vi" Type="VI" URL="../subVIs/Helpers/Log Events.vi"/>
 			<Item Name="Wrap Next Generation.vi" Type="VI" URL="../subVIs/Helpers/Wrap Next Generation.vi"/>
 			<Item Name="Add Event.vi" Type="VI" URL="../subVIs/Helpers/Add Event.vi"/>
 		</Item>
