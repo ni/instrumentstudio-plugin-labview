@@ -55,7 +55,7 @@ The G Plug-In SDK generator tool enables users create a G Plug-In template, whic
 
 ## Examples
 
-The `Examples` directory contains the Game of Life G plug-in example. See the [README.md](../Examples/Game%20of%20Life/README.md) file for more information.
+The `Examples` directory contains the Game of Life G plug-in example. See the [README.md](Examples/Game%20of%20Life/README.md) file for more information.
 
 ---
 
