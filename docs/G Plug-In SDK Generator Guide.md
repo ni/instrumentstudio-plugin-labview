@@ -1,48 +1,35 @@
-# G Plug-In SDK for LabVIEW
+# G Plug-In SDK Generator for LabVIEW
 
-- [G Plug-In SDK for LabVIEW](#g-plug-in-sdk-for-labview)
-  - [Overview](#overview)
-  - [Software Requirements](#software-requirements)
-  - [Installation](#installation)
-  - [Developing a G Plug-In](#developing-a-g-plug-in)
-  - [Using the G Plug-In in InstrumentStudio](#using-the-g-plug-in-in-instrumentstudio)
-  - [Recommended PPL build settings](#recommended-ppl-build-settings)
-  - [Package a G Plug-In](#package-a-g-plug-in)
+- [G Plug-In SDK Generator for LabVIEW](#g-plug-in-sdk-generator-for-labview)
+  - [Introduction](#introduction)
+  - [Workflow](#workflow)
+    - [User workflow](#user-workflow)
+    - [Developing a G Plug-In](#developing-a-g-plug-in)
+    - [Using the G Plug-In in InstrumentStudio](#using-the-g-plug-in-in-instrumentstudio)
+    - [Recommended PPL build settings](#recommended-ppl-build-settings)
+    - [Package a G Plug-In](#package-a-g-plug-in)
   - [G Plug-In Components](#g-plug-in-components)
     - [Plug-in format for newly created G Plug-In](#plug-in-format-for-newly-created-g-plug-in)
     - [G Plug-In Data File](#g-plug-in-data-file)
-      - [G Plug-In Data Elements](#g-plug-in-data-elements)
     - [Saving the Soft Panel Data](#saving-the-soft-panel-data)
     - [Updating the run status](#updating-the-run-status)
   - [Troubleshooting](#troubleshooting)
 
-## Overview
+---
 
-The G Plug-In SDK for LabVIEW allows users to integrate custom LabVIEW applications into InstrumentStudio. This integration enhances InstrumentStudio's functionality by enabling the addition of highly interactive measurements, controls, and displays that are tailored to their specific requirements. With G Plug-In support, users can interact with LabVIEW applications directly from the InstrumentStudio soft panel, providing a unified and efficient workflow.
+## Introduction
 
-Related Information:
+The G Plug-In SDK generator tool enables users create a G Plug-In template, which serves as a starting point for developing any LabVIEW application as G Plug-In.
 
-- [InstrumentStudio](https://www.ni.com/docs/en-US/bundle/instrumentstudio/page/user-manual-welcome.html)
+---
 
-## Software Requirements
+## Workflow
 
-NI Packages Dependency | Version Required
---- | ---
-[LabVIEW (64-bit)](https://www.ni.com/en/support/downloads/software-products/download.labview.html#443865), | 2021 SP1 or later
-[InstrumentStudio](https://www.ni.com/en/support/downloads/software-products/download.instrumentstudio.html#544066) | 2023 Q4 or later
-[JKI VI Package Manager](https://www.ni.com/en/support/downloads/tools-network/download.jki-vi-package-manager.html#443251) | 2021 SP1 or later
+### User workflow
 
-VIPM Packages Dependency | Version Required  
---- | ---
-[JDP Science Common Utilities](https://www.vipm.io/package/jdp_science_lib_common_utilities/) | 1.4.1.18
-[JSONtext](https://www.vipm.io/package/jdp_science_jsontext/) | 1.8.2.122
+![User Workflow](images/G%20Plug-In%20Guide/Workflow.png)
 
-## Installation
-
-1. Install the supported versions of software given in [Software Requirements](#software-requirements).
-2. Install the G Plug-In SDK, followed by the G Plug-In SDK Generator.
-
-## Developing a G Plug-In
+### Developing a G Plug-In
 
 1. Create and save a new LabVIEW project.
 2. From the project window, go to `Tools` → `Plug-In SDKs` → `G Plug-in` → `Create G Plug-in`
@@ -54,9 +41,9 @@ VIPM Packages Dependency | Version Required 
     ![G Plug-In Project](./images/G%20Plug-In%20Guide/G%20Plug-In%20Project.png)
 
 6. Check [G plug-in Components](#g-plug-in-components) for more details on the components.
-7. Edit the Main.vi and implement the logic in the block diagram.
+7. Open the `Main.vi` and add the logic / implement the application.
 
-## Using the G Plug-In in InstrumentStudio
+### Using the G Plug-In in InstrumentStudio
 
 1. Open the G Plug-In project.
 2. The generated plug-in comes with a Packed Project Library (PPL) build specification. Build the PPL.
@@ -68,12 +55,12 @@ VIPM Packages Dependency | Version Required 
 6. The plug-in UI will be displayed as an SFP in InstrumentStudio.  
     ![InstrumentStudio G Plug-In Soft Panel](./images/G%20Plug-In%20Guide/InstrumentStudio%20G%20Plug-In%20Soft%20Panel.png)
 
-## Recommended PPL build settings
+### Recommended PPL build settings
 
 When setting up a packed library build specification, ensure the following settings are configured appropriately:
 
 - Allow future versions of LabVIEW to load this Packed Library:
-  - This option should always be enabled. InstrumentStudio supports plugin loading using only a single version of the LabVIEW Runtime Engine. If this option is not selected, the plugin will fail to load when InstrumentStudio utilizes a different runtime engine version than the one against which the plugin was built. If multiple versions of the LabVIEW Runtime Engine are installed on the system, InstrumentStudio will use the latest version.  
+  - Always keep this option enabled. InstrumentStudio can only load plugins with one version of the LabVIEW Runtime Engine. If you don't enable this option, the plugin won't work if InstrumentStudio uses a different version than the one it was made for. If you have multiple versions installed, InstrumentStudio will use the latest one.  
   ![PPL Setting - Allow Future Versions](./images/G%20Plug-In%20Guide/PPL%20Setting%20-%20Allow%20Future%20Versions.png)
 
 - Exclude dependent Packed libraries:
@@ -87,14 +74,18 @@ When setting up a packed library build specification, ensure the following setti
   - Adding a unique prefix prevents name collisions when the library is loaded into memory. It also ensures the plugin uses the specific version it was built against, rather than another version installed by a different plugin.  
   ![PPL Setting - Apply Prefix](./images/G%20Plug-In%20Guide/PPL%20Setting%20-%20Apply%20Prefix.png)
 
-## Package a G Plug-In
+### Package a G Plug-In
 
 1. Create an Installer build specification in LabVIEW. Refer this [link](https://www.ni.com/docs/en-US/bundle/labview/page/building-and-distributing-applications.html) for creating build specification.
 2. Add the PPL as the source file.
 3. Set the destination directory to `C:\Program Files\National Instruments\InstrumentStudio\Addons\<Plug-inName>`
 4. Build the Installer.
 
+---
+
 ## G Plug-In Components
+
+![G Plug-In Components](images/G%20Plug-In%20Guide/G%20Plug-In%20Components.png)
 
 ### Plug-in format for newly created G Plug-In
 
@@ -179,6 +170,8 @@ G Plug-In can save and reload the UI controls data. The data can be saved in the
 Set the following property to True to update the running status in the InstrumentStudio.  
   ![Update Running State](./images/G%20Plug-In%20Guide/Update%20Running%20State.png)  
   ![InstrumentStudio Soft Panel State](./images/G%20Plug-In%20Guide/InstrumentStudio%20Soft%20Panel%20State.png)
+
+---
 
 ## Troubleshooting
 
