@@ -41,10 +41,10 @@ Install the [G Plug-in SDK](), followed by the [G Plug-in SDK Generator]().
 
 ## Developing a G Plug-In in LabVIEW
 
-The G Plug-In SDK generator tool enables users create a G Plug-In template, which serves as a starting point for developing any LabVIEW application as G Plug-In. The steps to create a G Plug-In using the G Plug-In SDK generator tool is as follows:
+The G Plug-In SDK generator tool enables users create a G Plug-In template, which serves as a starting point for developing any LabVIEW application as G Plug-In. The steps to create a G Plug-In using the G Plug-In SDK generator tool are as follows:
 
 1. Create and save a new LabVIEW project.
-2. From the project window, go to `Tools` → `Plug-In SDKs` → `G Plug-in` → `Create G Plug-in...`.
+2. From the project window, go to `Tools` → `Plug-In SDKs` → `G Plug-in` → `Create G Plug-in...`
 3. In the dialog, enter the `G Plug-in Name` and `G Plug-in Group`, then click `Create G Plug-in`.  
     ![New plug-in dialog](images/Startup.png)
 4. This will create a new LabVIEW library and a .gplugindata file.  
@@ -55,7 +55,7 @@ The G Plug-In SDK generator tool enables users create a G Plug-In template, whic
 
 ## Examples
 
-The `Examples` directory contains the Game of Life G plug-in example. See the [README.md](Examples/Game%20of%20Life/README.md) file for more information.
+The `Examples` directory contains the Game of Life G plug-in example. See the [README.md](../Examples/Game%20of%20Life/README.md) file for more information.
 
 ---
 
