@@ -24,6 +24,7 @@
 			<Item Name="Initialize Game.vi" Type="VI" URL="../subVIs/Helpers/Initialize Game.vi"/>
 			<Item Name="Get System Document Path.vi" Type="VI" URL="../subVIs/Helpers/Get System Document Path.vi"/>
 			<Item Name="Get 8 Neighbors.vi" Type="VI" URL="../subVIs/Helpers/Get 8 Neighbors.vi"/>
+			<Item Name="Get Log Directory Path.vi" Type="VI" URL="../subVIs/Helpers/Get Log Directory Path.vi"/>
 			<Item Name="Get Neighbor Coordinates.vi" Type="VI" URL="../subVIs/Helpers/Get Neighbor Coordinates.vi"/>
 			<Item Name="Get Neighbor Values.vi" Type="VI" URL="../subVIs/Helpers/Get Neighbor Values.vi"/>
 			<Item Name="Next Generation.vi" Type="VI" URL="../subVIs/Helpers/Next Generation.vi"/>
