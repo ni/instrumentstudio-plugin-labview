@@ -16,7 +16,7 @@ The plugin type described in this documentation may be referred to as either `G 
 - Initiates the game upon clicking the `Start` button.
 - Changes the InstrumentStudio soft front panel status to `running` when the game begins.
 - Preserves the front panel control inputs in `Edit Time configuration` and retains their values when the soft front panel is reopened.
-- Allows the user to stop the game using the `Stop all outputs` button which is present in the InstrumentStudio soft front panel header..
+- Allows the user to stop the game using the `Stop all outputs` button which is present in the InstrumentStudio soft front panel header.
 - Offers an option to enable or disable event logging via a checkbox.
 - Logs InstrumentStudio events with timestamps in a CSV file, saved either in the root directory of the InstrumentStudio project under the `Event Logs` folder or in the user documents under the `InstrumentStudio Logs` folder if no InstrumentStudio project is found.
 - Opens the log file after the soft front panel is closed.
