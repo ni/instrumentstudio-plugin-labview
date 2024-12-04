@@ -1,4 +1,4 @@
-# Game of Life - InstrumentStudio plugin Example
+# Game of Life - InstrumentStudio Plugin Example
 
 This InstrumentStudio plugin example illustrates how to host Game of Life LabVIEW code seamlessly into InstrumentStudio environment.
 
