@@ -106,7 +106,7 @@
 				<Property Name="DestinationCount" Type="Int">2</Property>
 				<Property Name="PackedLib_callersAdapt" Type="Bool">true</Property>
 				<Property Name="Source[0].Container.applyPrefix" Type="Bool">true</Property>
-				<Property Name="Source[0].itemID" Type="Str">{1D75A90F-B327-4ED2-8AE0-72310AD35193}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{A982FB60-1A71-4DC8-B4AD-EB5D46F71A4E}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/My Computer/Game of Life.lvlib</Property>

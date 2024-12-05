@@ -21,6 +21,7 @@
 	<Item Name="subVIs" Type="Folder">
 		<Item Name="Helpers" Type="Folder">
 			<Property Name="NI.SortType" Type="Int">3</Property>
+			<Item Name="Align Error Message.vi" Type="VI" URL="../subVIs/Helpers/Align Error Message.vi"/>
 			<Item Name="Initialize Game.vi" Type="VI" URL="../subVIs/Helpers/Initialize Game.vi"/>
 			<Item Name="Get System Document Path.vi" Type="VI" URL="../subVIs/Helpers/Get System Document Path.vi"/>
 			<Item Name="Get 8 Neighbors.vi" Type="VI" URL="../subVIs/Helpers/Get 8 Neighbors.vi"/>

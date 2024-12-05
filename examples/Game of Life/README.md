@@ -2,7 +2,7 @@
 
 This InstrumentStudio plugin example illustrates how to host Game of Life LabVIEW code seamlessly into InstrumentStudio environment.
 
-This example demonstrates the usage of XY Data in a graph. It allows the user to specify the size of the game board and the update interval between generations. It will run indefinitely as long as there are 'births' and 'deaths' happening on the game board unless the `Stop all outputs` or `Stop` button is clicked.
+This example demonstrates the usage of XY Data in a graph. It allows the user to specify the size of the game board and the update interval between generations. It will run indefinitely as long as there are 'births' and 'deaths' happening on the game board unless the `Stop all outputs` or `Start/Stop` button is switched off.
 
 ## Terminology
 
@@ -13,11 +13,11 @@ The plugin type described in this documentation may be referred to as either `G 
 - Contains a LabVIEW project featuring the Game of Life InstrumentStudio plugin example.
 - Includes a .gplugindata file that informs InstrumentStudio about the properties of the InstrumentStudio plugin example and its implementation code.
 - Contains an InstrumentStudio project and a soft front panel to host the Game of Life InstrumentStudio plugin example within InstrumentStudio.
-- Initiates the game upon clicking the `Start` button in `Game Panel` tab.
+- Initiates the game upon switching on `Start\Stop` button in `Game Panel` tab.
 - Changes the InstrumentStudio soft front panel status to `running` when the game begins.
 - Preserves the front panel control inputs in `Edit Time configuration` and retains their values when the soft front panel is reopened.
-- Allows the user to stop the game using the `Stop all outputs` button which is present in the InstrumentStudio soft front panel header or the `Stop` button present in the `Game Panel` tab of the soft front panel.
-- Offers an option to view and enable or disable event logging via a checkbox in the `Events` tab.
+- Allows the user to stop the game using the `Stop all outputs` button which is present in the InstrumentStudio soft front panel header or the `Start\Stop` button present in the `Game Panel` tab of the soft front panel.
+- Provides an option to view event logs and enable or disable event logging via a checkbox in the `Events` tab.
 - Logs InstrumentStudio events and errors with timestamps in a CSV file, saved either in the root directory of the InstrumentStudio project under the `Event Logs` folder or in the user documents under the `InstrumentStudio Logs` folder if no InstrumentStudio project is found.
 
 ## User Guide
