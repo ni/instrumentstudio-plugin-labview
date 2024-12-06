@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<GPluginMetadata xmlns="http://www.ni.com/InstrumentStudio/GPluginMetadata" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Plugins>
+		<PluginData 
+			ApplicationContext="Unique" 
+			DebuggingEnabled="false" 
+			DisplayName="Game of Life | G Plug-In" 
+			GroupName="NI Example Plugins" 
+			PanelType="Game of Life" 
+			ReentrantExecutionEnabled="false" 
+			SupportedPanelSizes="Large" 
+			UniqueName="National Instruments | Game of Life G Plug-In" 
+			VIPath="Game of Life.lvlibp\Main.vi" />
+	</Plugins>
+</GPluginMetadata>
