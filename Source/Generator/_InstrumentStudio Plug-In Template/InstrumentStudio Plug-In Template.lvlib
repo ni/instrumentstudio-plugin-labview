@@ -6,8 +6,6 @@
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
 	<Item Name="controls" Type="Folder">
 		<Item Name="Configuration.ctl" Type="VI" URL="../controls/Configuration.ctl"/>
-		<Item Name="Plugin Mode.ctl" Type="VI" URL="../controls/Plugin Mode.ctl"/>
-		<Item Name="UI References.ctl" Type="VI" URL="../controls/UI References.ctl"/>
 	</Item>
 	<Item Name="subVIs" Type="Folder">
 		<Item Name="Message Queue" Type="Folder">
