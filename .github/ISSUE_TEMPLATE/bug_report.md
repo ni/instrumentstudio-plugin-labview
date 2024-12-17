@@ -44,7 +44,7 @@ Search open/closed issues before submitting. Someone may have reported the same 
 <!--- Include as many relevant details as possible about the environment you experienced the bug in -->
 
 * OS & Device: [e.g. macOS, Windows, Linux] on [Mac, PC]
-* InstrumentStudio Plug-In SDK Service version [e.g. 1.0.0.1]
+* InstrumentStudio Plug-In SDK version [e.g. 1.0.0.1]
 * InstrumentStudio Plug-In SDK Generator version [e.g. 1.0.0.1]
 * InstrumentStudio version [e.g. 24.8.0d123]
 * LabVIEW version [e.g. 2021 SP1]
