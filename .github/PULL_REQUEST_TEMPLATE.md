@@ -1,3 +1,6 @@
+<!-- TODO: Mark the following with an 'x' as applicable -->
+- [ ] This contribution adheres to [CONTRIBUTING.md](https://github.com/ni/instrumentstudio-plugin-labview/blob/main/CONTRIBUTING.md). _(Required)_
+
 ### What does this Pull Request accomplish?
 
 TODO: Include high-level description of the changes in this pull request.
