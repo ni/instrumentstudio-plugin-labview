@@ -125,7 +125,8 @@ Components](./images/InstrumentStudio%20Plug-In%20Guide/InstrumentStudio%20Plug-
     ![InstrumentStudio
     Plug-in](./images/InstrumentStudio%20Plug-In%20Guide/InstrumentStudio%20Plug-In%20Library.png)
 
-2. The main VI contains three controls as shown.  
+2. The main VI contains four controls: three for inputs and one for displaying
+   the running status.  
 
     ![Main VI](./images/InstrumentStudio%20Plug-In%20Guide/Main%20VI.png)
 
