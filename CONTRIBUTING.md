@@ -1,13 +1,15 @@
-# Contributing to *g-plugin-labview*
+# Contributing to InstrumentStudio Plug-In for LabVIEW
 
-Contributions to *g-plugin-labview* are welcome from all!
+Contributions to InstrumentStudio Plug-In for LabVIEW are welcome from all!
 
-*g-plugin-labview* is managed via [git](https://git-scm.com), with the canonical upstream
-repository hosted on [GitHub](https://github.com/ni/g-plugin-labview/).
+InstrumentStudio Plug-In for LabVIEW is managed via [git](https://git-scm.com),
+with the canonical upstream repository hosted on
+[GitHub](https://github.com/ni/instrumentstudio-plugin-labview).
 
-*g-plugin-labview* follows a pull-request model for development.  If you wish to
-contribute, you will need to create a GitHub account, fork this project, push a
-branch with your changes to your project, and then submit a pull request.
+InstrumentStudio Plug-In for LabVIEW follows a pull-request model for
+development.  If you wish to contribute, you will need to create a GitHub
+account, fork this project, push a branch with your changes to your project, and
+then submit a pull request.
 
 Please remember to sign off your commits (e.g., by using `git commit -s` if you
 are using the command line client). This amends your git commit message with a line
@@ -21,38 +23,56 @@ See [GitHub's official documentation](https://help.github.com/articles/using-pul
 
 ## Getting Started
 
-This repo contains source code and package build specifications for building the source into VI packages.
+This repo contains source code and package build specifications for building the
+source into VI packages.
 
-The source code can be found under the `Source` directory. The package definition files (.vipb) can be found under the `Build Specs` directory.
+The source code can be found under the `Source` directory. The package
+definition files (.vipb) can be found under the `build specs` directory. The
+example InstrumentStudio plug-in can be found under the `examples` directory.
 
 ## Building the LabVIEW Packages
 
 The source code is built into two LabVIEW packages
 
-* `ni_lib_g_plugin_sdk`
-* `ni_lib_g_plugin_sdk_generator`
+* `ni_instrumentstudio_plugin_sdk`
+* `ni_instrumentstudio_plugin_sdk_generator`
 
 To build the packages:
 
-1. Open the desired VIPM specification file (.vipb) under the [`Build Specs`](https://github.com/ni/g-plugin-labview/tree/main/Source/Build%20Specs) folder
-2. Open the Specification file using VIPM 2023 or later
-3. Click Build - A .vip will be created in the `Source` folder parallel to the `Build Specs` folder.
+1. Open the desired VIPM specification file (.vipb) under the [`build
+   specs`](https://github.com/ni/instrumentstudio-plugin-labview/tree/main/build%20specs)
+   folder
+2. Open the Specification file using VIPM 2021 or later
+3. Click Build - A .vip will be created in the `Build Output` folder under the
+   repo root directory
 
-## `ni_lib_g_plugin_sdk` Package
+## `ni_instrumentstudio_plugin_sdk` Package
 
-This is simply a top-level package that has dependencies on the `ni_lib_g_plugin_sdk_generator` package.
+The `ni_instrumentstudio_plugin_sdk` package contains the
+`InstrumentStudioPluginSDK` PPL, `NationalInstruments.VIHost.Interop` DLL and
+two `.vim` files required for serialize and deserialize of controls data in the
+plug-in. These files are needed to run a LabVIEW InstrumentStudio plug-in.
 
-## `ni_lib_g_plugin_sdk_generator` Package
+## `ni_instrumentstudio_plugin_sdk_generator` Package
 
-The `ni_lib_g_plugin_sdk_generator` package contains the libraries needed to create new G Plug-ins.
+The `ni_instrumentstudio_plugin_sdk_generator` package contains the libraries
+needed to create new InstrumentStudio plug-ins.
 
-### G Plugin Template
+### InstrumentStudio Plug-In Template
 
-The `G Plugin Template` library contains the VIs and controls that are required for a G Plug-in.
+The `InstrumentStudio Plug-In Template` library contains the VIs and controls
+that are required for an InstrumentStudio plug-in.
 
-### G Plugin Editor
+### InstrumentStudio Plug-In Editor
 
-The `G Plugin Editor` library contains the scripting code required to generate a G Plug-in. It starts with the `G Plugin Template` as the base library and then customizes it for a specific application.
+The `InstrumentStudio Plug-In Editor` library contains the scripting code
+required to generate an InstrumentStudio plug-in. It starts with the
+`InstrumentStudio Plug-In Template` as the base library and then customizes it
+for a specific plug-in.
+
+## Testing
+
+Testing should be done manually before submitting the PR.
 
 ## Developer Certificate of Origin (DCO)
 
@@ -84,5 +104,5 @@ The `G Plugin Editor` library contains the scripting code required to generate a
 
 (taken from [developercertificate.org](https://developercertificate.org/))
 
-See [LICENSE](https://github.com/ni/g-plugin-labview/blob/main/LICENSE)
+See [LICENSE](https://github.com/ni/instrumentstudio-plugin-labview/blob/main/LICENSE)
 for details about how *g-plugin-labview* is licensed.
