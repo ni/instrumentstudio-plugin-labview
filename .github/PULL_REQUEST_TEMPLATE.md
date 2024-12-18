@@ -12,3 +12,13 @@ TODO: Justify why this contribution should be part of the project.
 ### What testing has been done?
 
 TODO: Detail what testing has been done to ensure this submission meets requirements.
+
+### Checklist
+- [ ] Code follows coding standards
+- [ ] No breakpoints in code
+- [ ] VIs aligned to the top left corner
+- [ ] Manual tests conducted
+- [ ] Doesn’t break existing functionality
+- [ ] Documentation updated (if applicable)
+- [ ] No performance regressions (if applicable)
+- [ ] Tests have been written/updated (if applicable)
