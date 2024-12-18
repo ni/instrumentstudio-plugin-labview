@@ -94,7 +94,7 @@ settings are configured appropriately:
     shared library other than `NationalInstruments.VIHost.Interop.dll`, then this
     option is typically disabled unless those libraries are system libraries
     that will be distributed through some other mechanism such as the
-    installation of a driver.  
+    installation of a driver.
 
     ![PPL Setting - Uncheck
     Excludes](./images/InstrumentStudio%20Plug-In%20Guide/PPL%20Setting%20-%20Uncheck%20Excludes.png)
@@ -103,7 +103,7 @@ settings are configured appropriately:
   - If including dependent shared libraries and the shared library is private to
     the plug-in and not part of a system path, you may also want to add a prefix
     to the library name as part of the build if it can be installed by multiple
-    plug-ins to different locations on disk.  
+    plug-ins to different locations on disk.
   - Adding a unique prefix to the library prevents name collisions when loaded
     into memory and ensures the plug-in uses the exact version it was built
     against rather than another version installed by a different plug-in.
@@ -121,13 +121,13 @@ The components of a LabVIEW InstrumentStudio plug-in are shown below.
 Components](./images/InstrumentStudio%20Plug-In%20Guide/InstrumentStudio%20Plug-In%20Components.png)
 
 1. The InstrumentStudio plug-in consists of a LabVIEW library, VIs, controls and
-   a `.gplugindata` file.  
+   a `.gplugindata` file.
 
     ![InstrumentStudio
     Plug-in](./images/InstrumentStudio%20Plug-In%20Guide/InstrumentStudio%20Plug-In%20Library.png)
 
 2. The main VI contains four controls: three for inputs and one for displaying
-   the running status.  
+   the running status.
 
     ![Main VI](./images/InstrumentStudio%20Plug-In%20Guide/Main%20VI.png)
 
@@ -189,8 +189,8 @@ its structure.
 </GPluginMetadata>
 ```
 
-- The `GPluginMetadata` element is the root element containing all of the data
-  to be registered with InstrumentStudio. You must specify the namespace for the
+- The `GPluginMetadata` element is the root element containing all the data to
+  be registered with InstrumentStudio. You must specify the namespace for the
   schema as shown in the example above.
 - The `Plugins` element contains the list of plugins.
 - Each `PluginData` element registers a single plug-in and lists its properties.
@@ -263,7 +263,8 @@ steps:
     ![Save Data in Edit Time
     Configuration](./images/InstrumentStudio%20Plug-In%20Guide/Save%20Data%20in%20Edit%20Time%20Configuration.png)
 
-3. Unflatten the string stored in the session object to retrieve the controls data.
+3. Unflatten the string stored in the session object to retrieve the controls'
+   data.
 
     ![Load saved data from Edit Time
     Configuration](./images/InstrumentStudio%20Plug-In%20Guide/Load%20saved%20data%20from%20Edit%20Time%20Configuration.png)
@@ -286,6 +287,6 @@ status of the InstrumentStudio plug-in to `running` in the Soft Front Panel.
 ## Troubleshooting
 
 If the plug-in doesn't appear in the InstrumentStudio's Edit Layout dialog,
-ensure the `.gplugindata` file is under the Addons directory of
+ensure the `.gplugindata` file is under the "Addons" directory of
 InstrumentStudio. If there is an error reading this file, InstrumentStudio will
 display a message box with details about the error.

@@ -60,10 +60,10 @@ generator tool.
 1. Open InstrumentStudio and click `Manual Layout`.
 2. The InstrumentStudio plug-in will be listed under the Add-Ons category within
    the group specified in the `.gplugindata` file.
-3. Choose the desired plug-in and create a large panel.  
+3. Choose the desired plug-in and create a large panel.
   
    ![Edit Layout](./docs/images/InstrumentStudio%20Edit%20Layout.png)
-4. The layout will be populated with the plug-in UI as shown below.  
+4. The layout will be populated with the plug-in UI as shown below.
 
    ![Plug-In SFP](./docs/images/InstrumentStudio%20Plug-In%20Soft%20Panel.png)
 5. Modify the inputs in the UI to interact with the application.
@@ -86,7 +86,7 @@ generator tool.
 ## Examples
 
 The `examples` directory contains the Game of Life InstrumentStudio plug-in
-example. Refer to the [README.md](./examples/Game%20of%20Life/README.md) file
+example. Refer to the example's [README.md](./examples/Game%20of%20Life/README.md) file
 for more information.
 
 ---

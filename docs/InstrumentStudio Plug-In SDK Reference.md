@@ -47,7 +47,7 @@ on their front panel to better fit into that panel size.
 
 LabVIEW plugin panels are uniquely identified by the Plugin Session which is set
 by the framework when the plugin is run. Plugins must have a control named
-'Session Id' which is a U64 numeric control on their plugin VI front panel so
+'Session Id' which is a U64 numeric control on their plugin VI front panel, so
 the framework can correctly set it. This 'Session Id' is then passed to Create
 Session.vi to begin the plugin session. This control can be placed on the user's
 VI by right-clicking on the input of the Create Session.vi and choosing 'Create
@@ -274,7 +274,7 @@ Call this VI to close out all references created for the session and unregister
 the plugin session with the framework. It should be called at the end of your
 plugin VI after the event loop is completed as the last call in the VI. After
 calling this VI, the plugin session is no longer valid and should not be used to
-call any other SDK VIs.  This VI executes regardless of the value of error in.
+call any other SDK VIs. This VI executes regardless of the error in value.
 
 ### Inputs
 
