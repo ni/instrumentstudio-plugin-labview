@@ -7,7 +7,7 @@ with the canonical upstream repository hosted on
 [GitHub](https://github.com/ni/instrumentstudio-plugin-labview).
 
 InstrumentStudio Plug-In for LabVIEW follows a pull-request model for
-development.  If you wish to contribute, you will need to create a GitHub
+development. If you wish to contribute, you will need to create a GitHub
 account, fork this project, push a branch with your changes to your project, and
 then submit a pull request.
 
@@ -30,12 +30,42 @@ The source code can be found under the `Source` directory. The package
 definition files (.vipb) can be found under the `build specs` directory. The
 example InstrumentStudio plug-in can be found under the `examples` directory.
 
+## Prerequisites
+
+- Install Git
+- Install Software Dependencies mentioned in the `README.md`
+
+## Clone or Update the Git Repository
+
+To download the InstrumentStudio Plug-In for LabVIEW source, clone its Git
+repository to your local PC.
+
+```cmd
+git clone https://github.com/ni/instrumentstudio-plugin-labview.git
+```
+
+If you already have the Git repository on your local PC, you can update it
+
+```cmd
+git checkout main
+
+git pull
+```
+
+## Steps to Contribute
+
+To contribute to this project, it is recommended that you follow these steps:
+
+1. Make your change.
+2. Send a GitHub Pull Request to the main repository's master branch. GitHub
+   Pull Requests are the expected method of code collaboration on this project.
+
 ## Building the LabVIEW Packages
 
 The source code is built into two LabVIEW packages
 
-* `ni_instrumentstudio_plugin_sdk`
-* `ni_instrumentstudio_plugin_sdk_generator`
+- `ni_instrumentstudio_plugin_sdk`
+- `ni_instrumentstudio_plugin_sdk_generator`
 
 To build the packages:
 
@@ -43,8 +73,8 @@ To build the packages:
    specs`](https://github.com/ni/instrumentstudio-plugin-labview/tree/main/build%20specs)
    folder
 2. Open the Specification file using VIPM 2021 or later
-3. Click Build - A .vip will be created in the `Build Output` folder under the
-   repo root directory
+3. Click Build. A `.vip` file will be created in the `Build Output` folder under
+   the repository's root directory
 
 ## `ni_instrumentstudio_plugin_sdk` Package
 
@@ -105,4 +135,4 @@ Testing should be done manually before submitting the PR.
 (taken from [developercertificate.org](https://developercertificate.org/))
 
 See [LICENSE](https://github.com/ni/instrumentstudio-plugin-labview/blob/main/LICENSE)
-for details about how *g-plugin-labview* is licensed.
+for details about how InstrumentStudio Plug-In for LabVIEW is licensed.
