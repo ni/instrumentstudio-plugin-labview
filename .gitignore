@@ -1,5 +1,26 @@
+# Libraries
+*.llb
+
+# Shared objects (inc. Windows DLLs)
+*.dll
+*.so
+*.so.*
+*.dylib
+
+# Executables
+*.exe
+
 # Metadata
 *.aliases
 *.lvlps
-*.vip
-*.exe
+.cache/
+.vs/
+
+# Builds
+/Build Output/
+BuiltUI/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
