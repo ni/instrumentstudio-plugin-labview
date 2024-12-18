@@ -80,8 +80,8 @@ To build the packages:
 
 The `ni_instrumentstudio_plugin_sdk` package contains the
 `InstrumentStudioPluginSDK` PPL, `NationalInstruments.VIHost.Interop` DLL and
-two `.vim` files required for serialize and deserialize of controls data in the
-plug-in. These files are needed to run a LabVIEW InstrumentStudio plug-in.
+two `.vim` files used to serialize and deserialize the data from the UI
+controls. These files are needed to run a LabVIEW InstrumentStudio plug-in.
 
 ## `ni_instrumentstudio_plugin_sdk_generator` Package
 
