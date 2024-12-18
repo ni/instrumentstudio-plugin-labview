@@ -61,7 +61,7 @@ plug-in components.
 
 ## Deploying a LabVIEW InstrumentStudio plug-in
 
-1. Open the LabVIEW project which contains the instrumentstudio plug-in.
+1. Open the LabVIEW project which contains the InstrumentStudio plug-in.
 2. The generated plug-in comes with a Packed Project
 Library (PPL) build specification.
 3. Build the PPL.
@@ -70,7 +70,8 @@ Instruments\InstrumentStudio\Addons\<Plug-in Name> directory`.
 
 ### Recommended PPL build settings
 
-When setting up a packed library build specification, ensure the following settings are configured appropriately:
+When setting up a packed library build specification, ensure the following
+settings are configured appropriately:
 
 - **Allow future versions of LabVIEW to load this Packed Library**
   - This option should always be enabled.  InstrumentStudio only supports

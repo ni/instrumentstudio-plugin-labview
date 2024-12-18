@@ -5,9 +5,9 @@
   - [Software support](#software-support)
   - [Installation](#installation)
   - [Developing and deploying a LabVIEW InstrumentStudio plug-in](#developing-and-deploying-a-labview-instrumentstudio-plug-in)
-  - [Examples](#examples)
   - [Using a LabVIEW InstrumentStudio plug-in in InstrumentStudio](#using-a-labview-instrumentstudio-plug-in-in-instrumentstudio)
   - [Building package to deploy a LabVIEW InstrumentStudio plug-in](#building-package-to-deploy-a-labview-instrumentstudio-plug-in)
+  - [Examples](#examples)
   - [Note](#note)
 
 ---
@@ -55,25 +55,17 @@ generator tool.
 
 ---
 
-## Examples
-
-The `examples` directory contains the Game of Life InstrumentStudio plug-in
-example. Refer to the [README.md](./examples/Game%20of%20Life/README.md) file
-for more information.
-
----
-
 ## Using a LabVIEW InstrumentStudio plug-in in InstrumentStudio
 
 1. Open InstrumentStudio and click `Manual Layout`.
 2. The InstrumentStudio plug-in will be listed under the Add-Ons category within
    the group specified in the `.gplugindata` file.
-3. Choose the desired plug-in and create a large panel.
+3. Choose the desired plug-in and create a large panel.  
+  
+   ![Edit Layout](./docs/images/InstrumentStudio%20Edit%20Layout.png)
+4. The layout will be populated with the plug-in UI as shown below.  
 
-    ![Edit Layout](./docs/images/InstrumentStudio%20Edit%20Layout.png)
-4. The layout will be populated with the plug-in UI as shown below.
-
-    ![Plug-In SFP](./docs/images/InstrumentStudio%20Plug-In%20Soft%20Panel.png)
+   ![Plug-In SFP](./docs/images/InstrumentStudio%20Plug-In%20Soft%20Panel.png)
 5. Modify the inputs in the UI to interact with the application.
 
 ---
@@ -88,6 +80,14 @@ for more information.
 3. Set the destination directory to `C:\Program Files\National
    Instruments\InstrumentStudio\Addons\<Plug-in Name>`
 4. Build and install the NI Package or Installer.
+
+---
+
+## Examples
+
+The `examples` directory contains the Game of Life InstrumentStudio plug-in
+example. Refer to the [README.md](./examples/Game%20of%20Life/README.md) file
+for more information.
 
 ---
 
