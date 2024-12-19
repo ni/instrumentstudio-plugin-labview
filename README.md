@@ -31,8 +31,8 @@ NI Packages Dependency | Version Required
 
 VIPM Packages Dependency | Version Required
 --- | ---
-[JDP Science Common Utilities](https://www.vipm.io/package/jdp_science_lib_common_utilities/) | 1.4.1.18
-[JSONtext](https://www.vipm.io/package/jdp_science_jsontext/) | 1.8.2.122
+[JDP Science Common Utilities](https://www.vipm.io/package/jdp_science_lib_common_utilities/) | 1.4.1.18 or later
+[JSONtext](https://www.vipm.io/package/jdp_science_jsontext/) | 1.8.2.122 or later
 
 ---
 
