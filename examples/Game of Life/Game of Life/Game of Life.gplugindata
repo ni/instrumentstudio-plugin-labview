@@ -4,12 +4,12 @@
 		<PluginData 
 			ApplicationContext="Unique" 
 			DebuggingEnabled="false" 
-			DisplayName="Game of Life | G Plug-In" 
+			DisplayName="Game of Life | InstrumentStudio Plug-In" 
 			GroupName="NI Example Plugins" 
 			PanelType="Game of Life" 
 			ReentrantExecutionEnabled="false" 
 			SupportedPanelSizes="Large" 
-			UniqueName="National Instruments | Game of Life G Plug-In" 
+			UniqueName="National Instruments | Game of Life InstrumentStudio Plug-In" 
 			VIPath="Game of Life.lvlibp\Main.vi" />
 	</Plugins>
 </GPluginMetadata>
