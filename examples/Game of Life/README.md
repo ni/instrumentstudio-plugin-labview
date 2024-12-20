@@ -4,10 +4,6 @@ This InstrumentStudio plugin example illustrates how to host Game of Life LabVIE
 
 This example demonstrates the usage of XY Data in a graph. It allows the user to specify the size of the game board and the update interval between generations. It will run indefinitely as long as there are 'births' and 'deaths' happening on the game board unless the `Stop all outputs` or `Start/Stop` button is switched off.
 
-## Terminology
-
-The plugin type described in this documentation may be referred to as either `G Plug-In` or `InstrumentStudio Plugin`. Both terms refer to the same type of plugin. However, for consistency, `InstrumentStudio Plugin` is the preferred terminology and will be used throughout this document.
-
 ## Features
 
 - Contains a LabVIEW project featuring the Game of Life InstrumentStudio plugin example.
