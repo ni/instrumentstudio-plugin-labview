@@ -15,8 +15,6 @@
 		<Item Name="Configuration.ctl" Type="VI" URL="../controls/Configuration.ctl"/>
 		<Item Name="Data.ctl" Type="VI" URL="../controls/Data.ctl"/>
 		<Item Name="Game of Life.ctl" Type="VI" URL="../controls/Game of Life.ctl"/>
-		<Item Name="Plugin Mode.ctl" Type="VI" URL="../controls/Plugin Mode.ctl"/>
-		<Item Name="UI References.ctl" Type="VI" URL="../controls/UI References.ctl"/>
 	</Item>
 	<Item Name="subVIs" Type="Folder">
 		<Item Name="Helpers" Type="Folder">
