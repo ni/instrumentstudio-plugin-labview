@@ -4,12 +4,12 @@
 		<PluginData 
 			ApplicationContext="Unique" 
 			DebuggingEnabled="false" 
-			DisplayName="Example plug-in that demonstrates hosting LabVIEW code within InstrumentStudio." 
+			DisplayName="Example plug-in that hosts Game of Life simulation LabVIEW code within InstrumentStudio." 
 			GroupName="NI Example Plugins" 
-			PanelType="Game of Life (LabVIEW)" 
+			PanelType="Game of Life" 
 			ReentrantExecutionEnabled="false" 
 			SupportedPanelSizes="Large" 
-			UniqueName="NI | LabVIEW InstrumentStudio Plugin | Game of Life" 
+			UniqueName="National Instruments | Game of Life InstrumentStudio Plug-In" 
 			VIPath="Game of Life.lvlibp\Main.vi" />
 	</Plugins>
 </GPluginMetadata>

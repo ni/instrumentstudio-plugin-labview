@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<SourceFile Checksum="4C12B2A4AF39088B2FB5979602D5E5E5159AC17501BF7600180FF1394C54A7A35F0D1891613C11A157C277D648533E40DF00BAC9C42F8B9954852C3BD5B0E44A" xmlns="http://www.ni.com/PlatformFramework">
+<SourceFile Checksum="0894B83872DA52ADB66799C4A148D74825C4EAB97ECCB09E2D8998F2AC41E0C7B5510ACC94D48ACFAE022C1AE2944D4D3D9B29022AC74E59F7DDE6FDA4D099AB" xmlns="http://www.ni.com/PlatformFramework">
 	<SourceModelFeatureSet>
 		<ParsableNamespace AssemblyFileVersion="9.14.0.49911" FeatureSetName="Editor" Name="http://www.ni.com/PlatformFramework" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
 		<ApplicationVersionInfo Build="24.8.0.49911" Name="InstrumentStudio" PersistenceVersion="22.1.0.0" Version="24.8.0.49911" />
@@ -11,7 +11,7 @@
 		</EmbeddedDefinitionReference>
 		<NameScopingEnvoy Id="e851151c3c19484292f97fd3e31c4d85" ModelDefinitionType="DefaultTarget" Name="DefaultTarget">
 			<DefaultTarget />
-			<SourceFileReference Bindings="EnvoyManager" Id="f450c918856b431db491ef0d187e6142" ModelDefinitionType="NationalInstruments.InstrumentFramework.Document.SourceModel.UnifiedTask" Name="Game of Life.sfp" StoragePath="Game of Life.sfp" />
+			<SourceFileReference Bindings="EnvoyManager" Id="f009a9bf50c3417b9fa356218fe5dac2" ModelDefinitionType="NationalInstruments.InstrumentFramework.Document.SourceModel.UnifiedTask" Name="Game of Life.sfp" StoragePath="Game of Life.sfp" />
 		</NameScopingEnvoy>
 	</Project>
 	<ProjectInformation xmlns="http://www.ni.com/PlatformFramework" />
