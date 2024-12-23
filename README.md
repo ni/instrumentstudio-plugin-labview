@@ -6,7 +6,7 @@
   - [Installation](#installation)
   - [Developing and deploying a LabVIEW InstrumentStudio plug-in](#developing-and-deploying-a-labview-instrumentstudio-plug-in)
   - [Using a LabVIEW InstrumentStudio plug-in in InstrumentStudio](#using-a-labview-instrumentstudio-plug-in-in-instrumentstudio)
-  - [Creating a package or installer to deploy the InstrumentStudio plug-in](#creating-a-package-or-installer-to-deploy-the-instrumentstudio-plug-in)
+  - [Creating a package or installer to deploy a LabVIEW InstrumentStudio plug-in](#creating-a-package-or-installer-to-deploy-a-labview-instrumentstudio-plug-in)
   - [Examples](#examples)
   - [Note](#note)
 
@@ -70,7 +70,7 @@ generator tool.
 
 ---
 
-## Creating a package or installer to deploy the InstrumentStudio plug-in
+## Creating a package or installer to deploy a LabVIEW InstrumentStudio plug-in
 
 1. Open the LabVIEW project which contains the InstrumentStudio plug-in.
 2. Create a Package or Installer build specification in the project. Refer to
