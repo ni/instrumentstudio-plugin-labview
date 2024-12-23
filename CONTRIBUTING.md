@@ -33,7 +33,7 @@ example InstrumentStudio plug-in can be found under the `examples` directory.
 ## Prerequisites
 
 - Install Git
-- Install Software Dependencies mentioned in the `README.md`
+- Install Software Dependencies mentioned in the [README.md](./README.md)
 
 ## Clone or Update the Git Repository
 
