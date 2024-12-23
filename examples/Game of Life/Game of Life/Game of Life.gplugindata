@@ -4,12 +4,12 @@
 		<PluginData 
 			ApplicationContext="Unique" 
 			DebuggingEnabled="false" 
-			DisplayName="Game of Life | G Plug-In" 
+			DisplayName="InstrumentStudio plug-in example that displays Conway's Game of Life simulation in a graph." 
 			GroupName="NI Example Plugins" 
-			PanelType="Game of Life" 
+			PanelType="Conway's Game of Life" 
 			ReentrantExecutionEnabled="false" 
 			SupportedPanelSizes="Large" 
-			UniqueName="National Instruments | Game of Life G Plug-In" 
+			UniqueName="National Instruments | Game of Life Plug-In" 
 			VIPath="Game of Life.lvlibp\Main.vi" />
 	</Plugins>
 </GPluginMetadata>
