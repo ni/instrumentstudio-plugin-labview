@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2024-09-03 18:01:59" Modified_Date="2024-12-13 14:00:13" Creator="lvadmin" Comments="" ID="e6498de56be1804f873ca859f4ff7d53">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2024-09-03 18:01:59" Modified_Date="2024-12-24 12:59:51" Creator="lvadmin" Comments="" ID="95ec3edd71aab97d3ef2178c6bd848ce">
   <Library_General_Settings>
     <Package_File_Name>ni_instrumentstudio_plugin_sdk</Package_File_Name>
-    <Library_Version>1.0.0.1</Library_Version>
+    <Library_Version>1.0.0.2</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\Source</Library_Source_Folder>
     <Library_Output_Folder>..\Build Output</Library_Output_Folder>
